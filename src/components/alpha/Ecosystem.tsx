@@ -56,7 +56,7 @@ export function Ecosystem() {
                       key={item}
                       className="absolute"
                       style={{
-                        transform: `translate(${Math.cos(angle) * ring.radius}px, ${Math.sin(angle) * ring.radius}px)`,
+                        transform: `translate(${(Math.cos(angle) * ring.radius).toFixed(2)}px, ${(Math.sin(angle) * ring.radius).toFixed(2)}px)`,
                       }}
                     >
                       <span
