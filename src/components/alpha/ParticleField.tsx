@@ -63,9 +63,9 @@ export function ParticleField() {
       }
 
       for (let i = 0; i < particles.length; i++) {
-        const a = particles[i];
+        const a = particles[i]!;
         for (let j = i + 1; j < particles.length; j++) {
-          const b = particles[j];
+          const b = particles[j]!;
           const d = Math.hypot(a.x - b.x, a.y - b.y);
           if (d < 130) {
             ctx.strokeStyle = `rgba(127, 217, 255, ${(1 - d / 130) * 0.16})`;

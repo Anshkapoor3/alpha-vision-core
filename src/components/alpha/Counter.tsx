@@ -3,11 +3,11 @@ import { useInView } from "motion/react";
 
 type Props = {
   to: number;
-  suffix?: string;
-  prefix?: string;
-  decimals?: number;
-  duration?: number;
-  className?: string;
+  suffix?: string | undefined;
+  prefix?: string | undefined;
+  decimals?: number | undefined;
+  duration?: number | undefined;
+  className?: string | undefined;
 };
 
 export function Counter({ to, suffix = "", prefix = "", decimals = 0, duration = 1800, className }: Props) {
