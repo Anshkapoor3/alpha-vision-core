@@ -3,9 +3,9 @@ import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
 const rings = [
-  { radius: 96, duration: 44, items: ["AWS", "Azure", "Kubernetes", "Docker"] },
-  { radius: 158, duration: 62, items: ["Snowflake", "Databricks", "Python", "React", "Terraform"] },
-  { radius: 222, duration: 84, items: ["LLMs", "RAG", "Agentic AI", "Machine Learning", "MLOps", "Vector DB"] },
+  { radius: 78, duration: 44, items: ["AWS", "Azure", "Kubernetes", "Docker"] },
+  { radius: 128, duration: 62, items: ["Snowflake", "Databricks", "Python", "React", "Terraform"] },
+  { radius: 180, duration: 84, items: ["LLMs", "RAG", "Agentic AI", "Machine Learning", "MLOps", "Vector DB"] },
 ];
 
 const groups = [
@@ -33,7 +33,7 @@ export function Ecosystem() {
         />
 
         <div className="mt-24 grid gap-20 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-          <Reveal className="relative mx-auto aspect-square w-full max-w-[560px] scale-[0.85] sm:scale-100">
+          <Reveal className="relative mx-auto aspect-square w-full max-w-[520px] scale-[0.72] sm:scale-90 lg:scale-100">
             <div className="absolute inset-0 grid place-items-center">
               <div className="glass-panel grid h-28 w-28 place-items-center rounded-full text-center">
                 <span className="font-display text-sm tracking-[0.2em]">ALPHA</span>
@@ -60,7 +60,7 @@ export function Ecosystem() {
                       }}
                     >
                       <span
-                        className="glass-panel block whitespace-nowrap rounded-full px-4 py-2 text-[0.65rem] tracking-[0.16em] text-foreground/85"
+                        className="glass-panel block whitespace-nowrap rounded-full px-3 py-1.5 text-[0.6rem] tracking-[0.14em] text-foreground/85"
                         style={{ animation: `alpha-orbit ${ring.duration}s linear infinite reverse` }}
                       >
                         {item.toUpperCase()}

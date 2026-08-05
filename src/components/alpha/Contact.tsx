@@ -90,7 +90,8 @@ export function Contact() {
                   title="Alpha IT Managed Services global headquarters location"
                   src="https://www.google.com/maps?q=2100%20McKinney%20Ave%20Dallas%20Texas&output=embed"
                   loading="lazy"
-                  className="h-[280px] w-full grayscale-[0.4] contrast-125 [filter:invert(0.92)_hue-rotate(180deg)]"
+                  className="h-[280px] w-full"
+                  style={{ filter: "invert(0.92) hue-rotate(185deg) saturate(0.65) contrast(0.92)" }}
                 />
               </div>
             </Reveal>
