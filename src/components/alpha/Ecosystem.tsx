@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 const rings = [
   { radius: 78, duration: 44, items: ["AWS", "Azure", "Kubernetes", "Docker"] },
   { radius: 128, duration: 62, items: ["Snowflake", "Databricks", "Python", "React", "Terraform"] },
-  { radius: 180, duration: 84, items: ["LLMs", "RAG", "Agentic AI", "Machine Learning", "MLOps", "Vector DB"] },
+  { radius: 180, duration: 84, items: ["LLMs", "RAG", "Agents", "MLOps", "Vector", "GenAI"] },
 ];
 
 const groups = [
