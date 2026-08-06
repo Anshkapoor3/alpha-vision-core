@@ -57,12 +57,64 @@
 :root {
   --radius: 0.25rem;
 
-  /* Brand primitives */
-  --navy-deep: oklch(0.18 0.055 251);
-  --navy: oklch(0.23 0.062 252);
+  /* Brand primitives — constant across themes */
+  --brand: oklch(0.53 0.145 255);
+  --brand-light: oklch(0.6 0.13 240);
+  --brand-cyan: oklch(0.62 0.11 226);
+
+  /* LIGHT THEME (default) */
+  --navy-deep: oklch(0.98 0.008 240);
+  --navy: oklch(0.955 0.012 244);
+
+  --background: oklch(0.99 0.004 240);
+  --foreground: oklch(0.22 0.055 252);
+  --surface: oklch(0.97 0.008 244);
+  --surface-2: oklch(0.94 0.014 244);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.055 252);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.055 252);
+  --primary: oklch(0.53 0.145 255);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.95 0.012 244);
+  --secondary-foreground: oklch(0.22 0.055 252);
+  --muted: oklch(0.95 0.012 244);
+  --muted-foreground: oklch(0.48 0.035 250);
+  --accent: oklch(0.6 0.13 240);
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.22 0.055 252 / 14%);
+  --input: oklch(0.22 0.055 252 / 18%);
+  --ring: oklch(0.53 0.145 255);
+
+  --particle-line: 31, 103, 193;
+  --particle-dot: 31, 103, 193;
+  --particle-opacity: 0.5;
+
+  /* Expressive tokens */
+  --gradient-brand: linear-gradient(120deg, var(--brand) 0%, var(--brand-light) 55%, var(--brand-cyan) 100%);
+  --gradient-aurora: radial-gradient(
+      60% 70% at 15% 20%,
+      color-mix(in oklab, var(--brand) 22%, transparent) 0%,
+      transparent 70%
+    ),
+    radial-gradient(50% 60% at 85% 10%, color-mix(in oklab, var(--brand-cyan) 18%, transparent) 0%, transparent 70%),
+    radial-gradient(70% 80% at 50% 110%, color-mix(in oklab, var(--brand-light) 16%, transparent) 0%, transparent 70%);
+  --glass: color-mix(in oklab, oklch(1 0 0) 70%, transparent);
+  --glass-border: color-mix(in oklab, var(--brand) 22%, transparent);
+  --shadow-glow: 0 24px 80px -38px color-mix(in oklab, var(--brand) 55%, transparent);
+  --shadow-lift: 0 40px 120px -60px oklch(0.22 0.055 252 / 0.35);
+  --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark {
   --brand: oklch(0.53 0.145 255);
   --brand-light: oklch(0.72 0.115 240);
   --brand-cyan: oklch(0.86 0.084 218);
+
+  --navy-deep: oklch(0.18 0.055 251);
+  --navy: oklch(0.23 0.062 252);
 
   --background: oklch(0.18 0.055 251);
   --foreground: oklch(0.98 0.005 240);
@@ -80,14 +132,14 @@
   --muted-foreground: oklch(0.74 0.028 245);
   --accent: oklch(0.72 0.115 240);
   --accent-foreground: oklch(0.18 0.055 251);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 14%);
   --ring: oklch(0.72 0.115 240);
 
-  /* Expressive tokens */
-  --gradient-brand: linear-gradient(120deg, var(--brand) 0%, var(--brand-light) 55%, var(--brand-cyan) 100%);
+  --particle-line: 127, 217, 255;
+  --particle-dot: 160, 220, 255;
+  --particle-opacity: 0.55;
+
   --gradient-aurora: radial-gradient(
       60% 70% at 15% 20%,
       color-mix(in oklab, var(--brand) 45%, transparent) 0%,
@@ -99,8 +151,8 @@
   --glass-border: color-mix(in oklab, var(--brand-cyan) 22%, transparent);
   --shadow-glow: 0 24px 80px -32px color-mix(in oklab, var(--brand-light) 65%, transparent);
   --shadow-lift: 0 40px 120px -50px oklch(0 0 0 / 0.85);
-  --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 
 @layer base {
   * {
