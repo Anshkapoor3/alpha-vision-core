@@ -55,6 +55,7 @@
 }
 
 :root {
+  color-scheme: light;
   --radius: 0.25rem;
 
   /* Brand primitives — constant across themes */
@@ -109,6 +110,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --brand: oklch(0.53 0.145 255);
   --brand-light: oklch(0.72 0.115 240);
   --brand-cyan: oklch(0.86 0.084 218);
