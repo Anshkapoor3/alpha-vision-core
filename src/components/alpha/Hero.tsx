@@ -39,10 +39,10 @@ export function Hero() {
           aria-hidden
           width={1920}
           height={1280}
-          className="h-full w-full scale-110 object-cover opacity-55 animate-drift"
+          className="h-full w-full scale-110 object-cover opacity-25 animate-drift dark:opacity-55"
         />
         <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,transparent_10%,var(--navy-deep)_78%)]" />
-        <div className="absolute inset-0 aurora opacity-70 mix-blend-screen" />
+        <div className="absolute inset-0 aurora opacity-80 mix-blend-multiply dark:opacity-70 dark:mix-blend-screen" />
       </motion.div>
 
       <div className="absolute inset-0 opacity-70">

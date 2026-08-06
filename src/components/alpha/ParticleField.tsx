@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTheme } from "./ThemeProvider";
 
 /**
  * Lightweight canvas particle field — brand-blue nodes with proximity links
@@ -6,12 +7,18 @@ import { useEffect, useRef } from "react";
  */
 export function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    const styles = getComputedStyle(document.documentElement);
+    const line = styles.getPropertyValue("--particle-line").trim() || "127, 217, 255";
+    const dot = styles.getPropertyValue("--particle-dot").trim() || "160, 220, 255";
+    const dotOpacity = styles.getPropertyValue("--particle-opacity").trim() || "0.55";
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let width = 0;
@@ -68,7 +75,7 @@ export function ParticleField() {
           const b = particles[j]!;
           const d = Math.hypot(a.x - b.x, a.y - b.y);
           if (d < 130) {
-            ctx.strokeStyle = `rgba(127, 217, 255, ${(1 - d / 130) * 0.16})`;
+            ctx.strokeStyle = `rgba(${line}, ${(1 - d / 130) * 0.16})`;
             ctx.lineWidth = 0.6;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -76,7 +83,7 @@ export function ParticleField() {
             ctx.stroke();
           }
         }
-        ctx.fillStyle = "rgba(160, 220, 255, 0.55)";
+        ctx.fillStyle = `rgba(${dot}, ${dotOpacity})`;
         ctx.beginPath();
         ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
         ctx.fill();
@@ -108,7 +115,7 @@ export function ParticleField() {
       window.removeEventListener("pointermove", onPointer);
       window.removeEventListener("pointerleave", onLeave);
     };
-  }, []);
+  }, [theme]);
 
   return <canvas ref={canvasRef} aria-hidden className="absolute inset-0 h-full w-full" />;
 }
