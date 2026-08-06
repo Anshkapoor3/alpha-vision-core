@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { MagneticButton } from "./MagneticButton";
+import { useTheme } from "./ThemeProvider";
 
 const links = [
   { label: "Capabilities", href: "#services" },
@@ -14,6 +15,7 @@ const links = [
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -58,6 +60,14 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <button
+              onClick={toggle}
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              title={theme === "dark" ? "Light mode" : "Dark mode"}
+              className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors duration-500 hover:border-[color-mix(in_oklab,var(--brand-cyan)_55%,transparent)] hover:text-foreground"
+            >
+              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
             <div className="hidden sm:block">
               <MagneticButton href="#contact" className="px-6 py-3 text-xs">
                 Start a conversation
