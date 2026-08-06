@@ -141,6 +141,7 @@
   --input: oklch(1 0 0 / 14%);
   --ring: oklch(0.72 0.115 240);
 
+  --eyebrow-color: var(--brand-cyan);
   --particle-line: 127, 217, 255;
   --particle-dot: 160, 220, 255;
   --particle-opacity: 0.55;
@@ -154,8 +155,10 @@
     radial-gradient(70% 80% at 50% 110%, color-mix(in oklab, var(--brand-light) 26%, transparent) 0%, transparent 70%);
   --glass: color-mix(in oklab, var(--foreground) 5%, transparent);
   --glass-border: color-mix(in oklab, var(--brand-cyan) 22%, transparent);
+  --glass-shadow: 0 30px 90px -60px oklch(0 0 0 / 0.9);
   --shadow-glow: 0 24px 80px -32px color-mix(in oklab, var(--brand-light) 65%, transparent);
   --shadow-lift: 0 40px 120px -50px oklch(0 0 0 / 0.85);
+
 }
 
 
