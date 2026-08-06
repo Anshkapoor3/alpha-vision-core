@@ -198,7 +198,9 @@
   background: var(--glass);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(22px) saturate(140%);
+  box-shadow: var(--glass-shadow);
 }
+
 
 @utility text-gradient {
   background: var(--gradient-brand);
