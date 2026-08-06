@@ -64,7 +64,7 @@ export function Journey() {
             {phases.map((p, i) => (
               <article
                 key={p.title}
-                className="group relative w-[min(78vw,430px)] shrink-0 rounded-[1.75rem] border border-border bg-[color-mix(in_oklab,var(--surface)_65%,transparent)] p-10 transition-colors duration-500 hover:border-[color-mix(in_oklab,var(--brand-cyan)_45%,transparent)]"
+                className="group relative w-[min(78vw,430px)] shrink-0 rounded-[1.75rem] border border-border elevated p-10 transition-colors duration-500 hover:border-[color-mix(in_oklab,var(--brand-cyan)_45%,transparent)]"
               >
                 <div className="flex items-center justify-between">
                   <span className="eyebrow">{p.step}</span>

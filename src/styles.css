@@ -59,54 +59,57 @@
   --radius: 0.25rem;
 
   /* Brand primitives — constant across themes */
-  --brand: oklch(0.53 0.145 255);
-  --brand-light: oklch(0.6 0.13 240);
-  --brand-cyan: oklch(0.62 0.11 226);
+  --brand: oklch(0.49 0.155 257);
+  --brand-light: oklch(0.58 0.14 243);
+  --brand-cyan: oklch(0.56 0.115 228);
 
   /* LIGHT THEME (default) */
-  --navy-deep: oklch(0.98 0.008 240);
-  --navy: oklch(0.955 0.012 244);
+  --navy-deep: oklch(0.965 0.012 245);
+  --navy: oklch(0.93 0.019 246);
 
-  --background: oklch(0.99 0.004 240);
-  --foreground: oklch(0.22 0.055 252);
-  --surface: oklch(0.97 0.008 244);
-  --surface-2: oklch(0.94 0.014 244);
+  --background: oklch(0.975 0.009 246);
+  --foreground: oklch(0.19 0.06 253);
+  --surface: oklch(0.945 0.016 246);
+  --surface-2: oklch(0.9 0.026 246);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.055 252);
+  --card-foreground: oklch(0.19 0.06 253);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.055 252);
-  --primary: oklch(0.53 0.145 255);
+  --popover-foreground: oklch(0.19 0.06 253);
+  --primary: oklch(0.49 0.155 257);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.95 0.012 244);
-  --secondary-foreground: oklch(0.22 0.055 252);
-  --muted: oklch(0.95 0.012 244);
-  --muted-foreground: oklch(0.48 0.035 250);
-  --accent: oklch(0.6 0.13 240);
+  --secondary: oklch(0.93 0.019 246);
+  --secondary-foreground: oklch(0.19 0.06 253);
+  --muted: oklch(0.93 0.019 246);
+  --muted-foreground: oklch(0.44 0.04 251);
+  --accent: oklch(0.55 0.14 245);
   --accent-foreground: oklch(0.99 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.22 0.055 252 / 14%);
-  --input: oklch(0.22 0.055 252 / 18%);
-  --ring: oklch(0.53 0.145 255);
+  --border: oklch(0.19 0.06 253 / 13%);
+  --input: oklch(0.19 0.06 253 / 18%);
+  --ring: oklch(0.49 0.155 257);
 
+  --eyebrow-color: var(--brand);
   --particle-line: 31, 103, 193;
   --particle-dot: 31, 103, 193;
-  --particle-opacity: 0.5;
+  --particle-opacity: 0.42;
 
   /* Expressive tokens */
   --gradient-brand: linear-gradient(120deg, var(--brand) 0%, var(--brand-light) 55%, var(--brand-cyan) 100%);
   --gradient-aurora: radial-gradient(
       60% 70% at 15% 20%,
-      color-mix(in oklab, var(--brand) 22%, transparent) 0%,
-      transparent 70%
+      color-mix(in oklab, var(--brand) 30%, transparent) 0%,
+      transparent 68%
     ),
-    radial-gradient(50% 60% at 85% 10%, color-mix(in oklab, var(--brand-cyan) 18%, transparent) 0%, transparent 70%),
-    radial-gradient(70% 80% at 50% 110%, color-mix(in oklab, var(--brand-light) 16%, transparent) 0%, transparent 70%);
-  --glass: color-mix(in oklab, oklch(1 0 0) 70%, transparent);
-  --glass-border: color-mix(in oklab, var(--brand) 22%, transparent);
-  --shadow-glow: 0 24px 80px -38px color-mix(in oklab, var(--brand) 55%, transparent);
-  --shadow-lift: 0 40px 120px -60px oklch(0.22 0.055 252 / 0.35);
+    radial-gradient(50% 60% at 85% 10%, color-mix(in oklab, var(--brand-cyan) 26%, transparent) 0%, transparent 70%),
+    radial-gradient(70% 80% at 50% 110%, color-mix(in oklab, var(--brand-light) 24%, transparent) 0%, transparent 72%);
+  --glass: color-mix(in oklab, oklch(1 0 0) 86%, transparent);
+  --glass-border: color-mix(in oklab, var(--brand) 20%, transparent);
+  --glass-shadow: 0 1px 2px oklch(0.19 0.06 253 / 0.05), 0 22px 48px -30px oklch(0.19 0.06 253 / 0.4);
+  --shadow-glow: 0 24px 80px -34px color-mix(in oklab, var(--brand) 55%, transparent);
+  --shadow-lift: 0 30px 90px -50px oklch(0.19 0.06 253 / 0.45);
   --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
 .dark {
@@ -138,6 +141,7 @@
   --input: oklch(1 0 0 / 14%);
   --ring: oklch(0.72 0.115 240);
 
+  --eyebrow-color: var(--brand-cyan);
   --particle-line: 127, 217, 255;
   --particle-dot: 160, 220, 255;
   --particle-opacity: 0.55;
@@ -151,8 +155,10 @@
     radial-gradient(70% 80% at 50% 110%, color-mix(in oklab, var(--brand-light) 26%, transparent) 0%, transparent 70%);
   --glass: color-mix(in oklab, var(--foreground) 5%, transparent);
   --glass-border: color-mix(in oklab, var(--brand-cyan) 22%, transparent);
+  --glass-shadow: 0 30px 90px -60px oklch(0 0 0 / 0.9);
   --shadow-glow: 0 24px 80px -32px color-mix(in oklab, var(--brand-light) 65%, transparent);
   --shadow-lift: 0 40px 120px -50px oklch(0 0 0 / 0.85);
+
 }
 
 
@@ -192,7 +198,9 @@
   background: var(--glass);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(22px) saturate(140%);
+  box-shadow: var(--glass-shadow);
 }
+
 
 @utility text-gradient {
   background: var(--gradient-brand);
@@ -223,8 +231,10 @@
   font-size: 0.6875rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--brand-cyan);
+  font-weight: 500;
+  color: var(--eyebrow-color);
 }
+
 
 @utility hairline {
   height: 1px;
@@ -330,4 +340,9 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+@utility elevated {
+  background: color-mix(in oklab, var(--card) 72%, transparent);
+  box-shadow: var(--glass-shadow);
 }
