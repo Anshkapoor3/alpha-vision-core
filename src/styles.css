@@ -231,8 +231,10 @@
   font-size: 0.6875rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--brand-cyan);
+  font-weight: 500;
+  color: var(--eyebrow-color);
 }
+
 
 @utility hairline {
   height: 1px;
