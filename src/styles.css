@@ -341,3 +341,8 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+@utility elevated {
+  background: color-mix(in oklab, var(--card) 72%, transparent);
+  box-shadow: var(--glass-shadow);
+}

@@ -65,7 +65,7 @@ function TiltCard({ children, index }: { children: React.ReactNode; index: numbe
         animate={{ rotateX: tilt.rx, rotateY: tilt.ry }}
         transition={{ type: "spring", stiffness: 180, damping: 18 }}
         style={{ transformPerspective: 1000 }}
-        className="group relative h-full overflow-hidden rounded-[1.75rem] border border-border bg-[color-mix(in_oklab,var(--surface)_70%,transparent)] p-9 transition-colors duration-500 hover:border-[color-mix(in_oklab,var(--brand-cyan)_45%,transparent)]"
+        className="group relative h-full overflow-hidden rounded-[1.75rem] border border-border elevated p-9 transition-colors duration-500 hover:border-[color-mix(in_oklab,var(--brand-cyan)_45%,transparent)]"
       >
         <div
           aria-hidden

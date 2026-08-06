@@ -85,7 +85,7 @@ export function Ecosystem() {
           <div className="grid gap-6 sm:grid-cols-2">
             {groups.map((g, i) => (
               <Reveal key={g.title} delay={i * 0.08}>
-                <div className="h-full rounded-[1.5rem] border border-border p-8 transition-colors duration-500 hover:border-[color-mix(in_oklab,var(--brand-cyan)_45%,transparent)]">
+                <div className="h-full rounded-[1.5rem] border border-border elevated p-8 transition-colors duration-500 hover:border-[color-mix(in_oklab,var(--brand-cyan)_45%,transparent)]">
                   <h3 className="eyebrow">{g.title}</h3>
                   <ul className="mt-6 space-y-3">
                     {g.items.map((it) => (
