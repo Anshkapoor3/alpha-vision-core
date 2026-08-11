@@ -15,10 +15,10 @@ const nodes = [
 ];
 
 const metrics = [
-  { value: 27, suffix: "", label: "Countries served" },
-  { value: 4, suffix: "", label: "24/7 operations hubs" },
-  { value: 1.8, decimals: 1, suffix: "B", prefix: "$", label: "Client cost avoided" },
-  { value: 11, suffix: "", label: "Regulated industries" },
+  { value: 150, suffix: "+", label: "Projects Delivered" },
+  { value: 60, suffix: "+", label: "Enterprise Clients" },
+  { value: 99.9, suffix: "%", decimals: 1, label: "Service Availability" },
+  { value: 24, suffix: "×7", label: "Technical Support" },
 ];
 
 export function GlobalImpact() {
@@ -27,15 +27,13 @@ export function GlobalImpact() {
       <div className="mx-auto w-[min(1400px,92vw)]">
         <SectionHeading
           index="01"
-          eyebrow="Global enterprise impact"
+          eyebrow="About Alpha ITMS"
           title={
             <>
-              One operating model.
-              <br />
-              <span className="text-gradient">Every timezone.</span>
+              Technology Solutions That Drive <span className="text-gradient">Business Growth</span>
             </>
           }
-          lede="Follow-the-sun engineering across four hubs, governed by a single delivery standard — so a incident in Frankfurt is handled with the same rigour as one in Dallas."
+          lede="Alpha ITMS is a technology-driven company specializing in custom software development, artificial intelligence, cloud computing, cybersecurity, managed IT services, and digital transformation. Our mission is to help organizations leverage technology to improve efficiency, enhance security, automate operations, and accelerate growth."
         />
 
         <div className="mt-20 grid gap-14 lg:grid-cols-[1.35fr_0.65fr] lg:items-center">
@@ -77,7 +75,7 @@ export function GlobalImpact() {
               <Reveal key={m.label} delay={i * 0.08} className="bg-background">
                 <div className="p-8 transition-colors duration-500 hover:bg-secondary">
                   <div className="font-display text-4xl font-medium">
-                    <Counter to={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals ?? 0} />
+                    <Counter to={m.value} suffix={m.suffix} decimals={m.decimals ?? 0} />
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">{m.label}</p>
                 </div>

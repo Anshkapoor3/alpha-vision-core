@@ -13,9 +13,9 @@ const offices = [
 ];
 
 const fields = [
-  { name: "name", label: "Full name", type: "text", placeholder: "Alexandra Reid" },
-  { name: "company", label: "Organisation", type: "text", placeholder: "Northbank Group" },
-  { name: "email", label: "Work email", type: "email", placeholder: "a.reid@company.com" },
+  { name: "name", label: "Full name", type: "text", placeholder: "John Smith" },
+  { name: "company", label: "Organisation", type: "text", placeholder: "Your Company" },
+  { name: "email", label: "Work email", type: "email", placeholder: "john@company.com" },
   { name: "phone", label: "Direct line", type: "tel", placeholder: "+1 555 0134" },
 ];
 
@@ -38,13 +38,13 @@ export function Contact() {
       <div className="relative mx-auto w-[min(1400px,92vw)]">
         <SectionHeading
           index="10"
-          eyebrow="Start the conversation"
+          eyebrow="Get in touch"
           title={
             <>
-              Tell us what is <span className="text-gradient">not working</span>
+              Ready to Accelerate Your <span className="text-gradient">Digital Transformation?</span>
             </>
           }
-          lede="Executive briefings run 45 minutes. You leave with a written point of view on your estate, whether or not we work together."
+          lede="Partner with Alpha ITMS to build secure, scalable, and intelligent technology solutions that empower your business."
         />
 
         <div className="mt-20 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -75,9 +75,9 @@ export function Contact() {
                 />
               </label>
               <div className="mt-10 flex flex-wrap items-center gap-6">
-                <MagneticButton type="submit">{sending ? "Sending…" : "Request a briefing"}</MagneticButton>
+                <MagneticButton type="submit">{sending ? "Sending…" : "Schedule a Consultation"}</MagneticButton>
                 <p className="max-w-xs text-xs leading-relaxed text-muted-foreground">
-                  Confidential by default. We sign your NDA before the first call if you prefer.
+                  We respond within one business day. Your information is always kept confidential.
                 </p>
               </div>
             </form>

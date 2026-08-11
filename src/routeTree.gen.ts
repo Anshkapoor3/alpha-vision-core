@@ -10,33 +10,424 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
+import { Route as CareersExploreJobsRouteImport } from './routes/careers/explore-jobs'
+import { Route as CareersFaqRouteImport } from './routes/careers/faq'
+import { Route as CareersWhyAlphaRouteImport } from './routes/careers/why-alpha'
+import { Route as WhatWeDoIndustriesRouteImport } from './routes/what-we-do/industries'
+import { Route as WhatWeDoProductsRouteImport } from './routes/what-we-do/products'
+import { Route as WhatWeDoServicesRouteImport } from './routes/what-we-do/services'
+import { Route as WhoWeAreAboutUsRouteImport } from './routes/who-we-are/about-us'
+import { Route as WhoWeAreGlobalPresenceRouteImport } from './routes/who-we-are/global-presence'
+import { Route as WhoWeAreLeadershipRouteImport } from './routes/who-we-are/leadership'
+import { Route as WhoWeAreOverviewRouteImport } from './routes/who-we-are/overview'
+import { Route as WhatWeDoIndustriesFinancialServicesRouteImport } from './routes/what-we-do/industries/financial-services'
+import { Route as WhatWeDoIndustriesGovernmentRouteImport } from './routes/what-we-do/industries/government'
+import { Route as WhatWeDoIndustriesHigherEducationRouteImport } from './routes/what-we-do/industries/higher-education'
+import { Route as WhatWeDoIndustriesInsuranceRouteImport } from './routes/what-we-do/industries/insurance'
+import { Route as WhatWeDoIndustriesManufacturingRouteImport } from './routes/what-we-do/industries/manufacturing'
+import { Route as WhatWeDoIndustriesNonProfitRouteImport } from './routes/what-we-do/industries/non-profit'
+import { Route as WhatWeDoIndustriesPharmaceuticalsRouteImport } from './routes/what-we-do/industries/pharmaceuticals'
+import { Route as WhatWeDoIndustriesResearchDevelopmentRouteImport } from './routes/what-we-do/industries/research-development'
+import { Route as WhatWeDoIndustriesRetailRouteImport } from './routes/what-we-do/industries/retail'
+import { Route as WhatWeDoIndustriesTelecommunicationsRouteImport } from './routes/what-we-do/industries/telecommunications'
+import { Route as WhatWeDoServicesCloudServicesRouteImport } from './routes/what-we-do/services/cloud-services'
+import { Route as WhatWeDoServicesCyberSecurityRouteImport } from './routes/what-we-do/services/cyber-security'
+import { Route as WhatWeDoServicesDataServicesRouteImport } from './routes/what-we-do/services/data-services'
+import { Route as WhatWeDoServicesDigitalTransformationRouteImport } from './routes/what-we-do/services/digital-transformation'
+import { Route as WhatWeDoServicesItImplementationAndIntegrationRouteImport } from './routes/what-we-do/services/it-implementation-and-integration'
+import { Route as WhatWeDoServicesItStrategyAndPlanningRouteImport } from './routes/what-we-do/services/it-strategy-and-planning'
+import { Route as WhatWeDoServicesManagedItServicesRouteImport } from './routes/what-we-do/services/managed-it-services'
+import { Route as WhatWeDoServicesOtherSpecializedServicesRouteImport } from './routes/what-we-do/services/other-specialized-services'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeDoRoute = WhatWeDoRouteImport.update({
+  id: '/what-we-do',
+  path: '/what-we-do',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersExploreJobsRoute = CareersExploreJobsRouteImport.update({
+  id: '/careers/explore-jobs',
+  path: '/careers/explore-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersFaqRoute = CareersFaqRouteImport.update({
+  id: '/careers/faq',
+  path: '/careers/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersWhyAlphaRoute = CareersWhyAlphaRouteImport.update({
+  id: '/careers/why-alpha',
+  path: '/careers/why-alpha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeDoIndustriesRoute = WhatWeDoIndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => WhatWeDoRoute,
+} as any)
+const WhatWeDoProductsRoute = WhatWeDoProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => WhatWeDoRoute,
+} as any)
+const WhatWeDoServicesRoute = WhatWeDoServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => WhatWeDoRoute,
+} as any)
+const WhoWeAreAboutUsRoute = WhoWeAreAboutUsRouteImport.update({
+  id: '/who-we-are/about-us',
+  path: '/who-we-are/about-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhoWeAreGlobalPresenceRoute = WhoWeAreGlobalPresenceRouteImport.update({
+  id: '/who-we-are/global-presence',
+  path: '/who-we-are/global-presence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhoWeAreLeadershipRoute = WhoWeAreLeadershipRouteImport.update({
+  id: '/who-we-are/leadership',
+  path: '/who-we-are/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhoWeAreOverviewRoute = WhoWeAreOverviewRouteImport.update({
+  id: '/who-we-are/overview',
+  path: '/who-we-are/overview',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeDoIndustriesFinancialServicesRoute =
+  WhatWeDoIndustriesFinancialServicesRouteImport.update({
+    id: '/financial-services',
+    path: '/financial-services',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesGovernmentRoute =
+  WhatWeDoIndustriesGovernmentRouteImport.update({
+    id: '/government',
+    path: '/government',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesHigherEducationRoute =
+  WhatWeDoIndustriesHigherEducationRouteImport.update({
+    id: '/higher-education',
+    path: '/higher-education',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesInsuranceRoute =
+  WhatWeDoIndustriesInsuranceRouteImport.update({
+    id: '/insurance',
+    path: '/insurance',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesManufacturingRoute =
+  WhatWeDoIndustriesManufacturingRouteImport.update({
+    id: '/manufacturing',
+    path: '/manufacturing',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesNonProfitRoute =
+  WhatWeDoIndustriesNonProfitRouteImport.update({
+    id: '/non-profit',
+    path: '/non-profit',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesPharmaceuticalsRoute =
+  WhatWeDoIndustriesPharmaceuticalsRouteImport.update({
+    id: '/pharmaceuticals',
+    path: '/pharmaceuticals',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesResearchDevelopmentRoute =
+  WhatWeDoIndustriesResearchDevelopmentRouteImport.update({
+    id: '/research-development',
+    path: '/research-development',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesRetailRoute =
+  WhatWeDoIndustriesRetailRouteImport.update({
+    id: '/retail',
+    path: '/retail',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoIndustriesTelecommunicationsRoute =
+  WhatWeDoIndustriesTelecommunicationsRouteImport.update({
+    id: '/telecommunications',
+    path: '/telecommunications',
+    getParentRoute: () => WhatWeDoIndustriesRoute,
+  } as any)
+const WhatWeDoServicesCloudServicesRoute =
+  WhatWeDoServicesCloudServicesRouteImport.update({
+    id: '/cloud-services',
+    path: '/cloud-services',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesCyberSecurityRoute =
+  WhatWeDoServicesCyberSecurityRouteImport.update({
+    id: '/cyber-security',
+    path: '/cyber-security',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesDataServicesRoute =
+  WhatWeDoServicesDataServicesRouteImport.update({
+    id: '/data-services',
+    path: '/data-services',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesDigitalTransformationRoute =
+  WhatWeDoServicesDigitalTransformationRouteImport.update({
+    id: '/digital-transformation',
+    path: '/digital-transformation',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesItImplementationAndIntegrationRoute =
+  WhatWeDoServicesItImplementationAndIntegrationRouteImport.update({
+    id: '/it-implementation-and-integration',
+    path: '/it-implementation-and-integration',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesItStrategyAndPlanningRoute =
+  WhatWeDoServicesItStrategyAndPlanningRouteImport.update({
+    id: '/it-strategy-and-planning',
+    path: '/it-strategy-and-planning',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesManagedItServicesRoute =
+  WhatWeDoServicesManagedItServicesRouteImport.update({
+    id: '/managed-it-services',
+    path: '/managed-it-services',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesOtherSpecializedServicesRoute =
+  WhatWeDoServicesOtherSpecializedServicesRouteImport.update({
+    id: '/other-specialized-services',
+    path: '/other-specialized-services',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/what-we-do': typeof WhatWeDoRouteWithChildren
+  '/careers/explore-jobs': typeof CareersExploreJobsRoute
+  '/careers/faq': typeof CareersFaqRoute
+  '/careers/why-alpha': typeof CareersWhyAlphaRoute
+  '/what-we-do/industries': typeof WhatWeDoIndustriesRouteWithChildren
+  '/what-we-do/products': typeof WhatWeDoProductsRoute
+  '/what-we-do/services': typeof WhatWeDoServicesRouteWithChildren
+  '/who-we-are/about-us': typeof WhoWeAreAboutUsRoute
+  '/who-we-are/global-presence': typeof WhoWeAreGlobalPresenceRoute
+  '/who-we-are/leadership': typeof WhoWeAreLeadershipRoute
+  '/who-we-are/overview': typeof WhoWeAreOverviewRoute
+  '/what-we-do/industries/financial-services': typeof WhatWeDoIndustriesFinancialServicesRoute
+  '/what-we-do/industries/government': typeof WhatWeDoIndustriesGovernmentRoute
+  '/what-we-do/industries/higher-education': typeof WhatWeDoIndustriesHigherEducationRoute
+  '/what-we-do/industries/insurance': typeof WhatWeDoIndustriesInsuranceRoute
+  '/what-we-do/industries/manufacturing': typeof WhatWeDoIndustriesManufacturingRoute
+  '/what-we-do/industries/non-profit': typeof WhatWeDoIndustriesNonProfitRoute
+  '/what-we-do/industries/pharmaceuticals': typeof WhatWeDoIndustriesPharmaceuticalsRoute
+  '/what-we-do/industries/research-development': typeof WhatWeDoIndustriesResearchDevelopmentRoute
+  '/what-we-do/industries/retail': typeof WhatWeDoIndustriesRetailRoute
+  '/what-we-do/industries/telecommunications': typeof WhatWeDoIndustriesTelecommunicationsRoute
+  '/what-we-do/services/cloud-services': typeof WhatWeDoServicesCloudServicesRoute
+  '/what-we-do/services/cyber-security': typeof WhatWeDoServicesCyberSecurityRoute
+  '/what-we-do/services/data-services': typeof WhatWeDoServicesDataServicesRoute
+  '/what-we-do/services/digital-transformation': typeof WhatWeDoServicesDigitalTransformationRoute
+  '/what-we-do/services/it-implementation-and-integration': typeof WhatWeDoServicesItImplementationAndIntegrationRoute
+  '/what-we-do/services/it-strategy-and-planning': typeof WhatWeDoServicesItStrategyAndPlanningRoute
+  '/what-we-do/services/managed-it-services': typeof WhatWeDoServicesManagedItServicesRoute
+  '/what-we-do/services/other-specialized-services': typeof WhatWeDoServicesOtherSpecializedServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/what-we-do': typeof WhatWeDoRouteWithChildren
+  '/careers/explore-jobs': typeof CareersExploreJobsRoute
+  '/careers/faq': typeof CareersFaqRoute
+  '/careers/why-alpha': typeof CareersWhyAlphaRoute
+  '/what-we-do/industries': typeof WhatWeDoIndustriesRouteWithChildren
+  '/what-we-do/products': typeof WhatWeDoProductsRoute
+  '/what-we-do/services': typeof WhatWeDoServicesRouteWithChildren
+  '/who-we-are/about-us': typeof WhoWeAreAboutUsRoute
+  '/who-we-are/global-presence': typeof WhoWeAreGlobalPresenceRoute
+  '/who-we-are/leadership': typeof WhoWeAreLeadershipRoute
+  '/who-we-are/overview': typeof WhoWeAreOverviewRoute
+  '/what-we-do/industries/financial-services': typeof WhatWeDoIndustriesFinancialServicesRoute
+  '/what-we-do/industries/government': typeof WhatWeDoIndustriesGovernmentRoute
+  '/what-we-do/industries/higher-education': typeof WhatWeDoIndustriesHigherEducationRoute
+  '/what-we-do/industries/insurance': typeof WhatWeDoIndustriesInsuranceRoute
+  '/what-we-do/industries/manufacturing': typeof WhatWeDoIndustriesManufacturingRoute
+  '/what-we-do/industries/non-profit': typeof WhatWeDoIndustriesNonProfitRoute
+  '/what-we-do/industries/pharmaceuticals': typeof WhatWeDoIndustriesPharmaceuticalsRoute
+  '/what-we-do/industries/research-development': typeof WhatWeDoIndustriesResearchDevelopmentRoute
+  '/what-we-do/industries/retail': typeof WhatWeDoIndustriesRetailRoute
+  '/what-we-do/industries/telecommunications': typeof WhatWeDoIndustriesTelecommunicationsRoute
+  '/what-we-do/services/cloud-services': typeof WhatWeDoServicesCloudServicesRoute
+  '/what-we-do/services/cyber-security': typeof WhatWeDoServicesCyberSecurityRoute
+  '/what-we-do/services/data-services': typeof WhatWeDoServicesDataServicesRoute
+  '/what-we-do/services/digital-transformation': typeof WhatWeDoServicesDigitalTransformationRoute
+  '/what-we-do/services/it-implementation-and-integration': typeof WhatWeDoServicesItImplementationAndIntegrationRoute
+  '/what-we-do/services/it-strategy-and-planning': typeof WhatWeDoServicesItStrategyAndPlanningRoute
+  '/what-we-do/services/managed-it-services': typeof WhatWeDoServicesManagedItServicesRoute
+  '/what-we-do/services/other-specialized-services': typeof WhatWeDoServicesOtherSpecializedServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/what-we-do': typeof WhatWeDoRouteWithChildren
+  '/careers/explore-jobs': typeof CareersExploreJobsRoute
+  '/careers/faq': typeof CareersFaqRoute
+  '/careers/why-alpha': typeof CareersWhyAlphaRoute
+  '/what-we-do/industries': typeof WhatWeDoIndustriesRouteWithChildren
+  '/what-we-do/products': typeof WhatWeDoProductsRoute
+  '/what-we-do/services': typeof WhatWeDoServicesRouteWithChildren
+  '/who-we-are/about-us': typeof WhoWeAreAboutUsRoute
+  '/who-we-are/global-presence': typeof WhoWeAreGlobalPresenceRoute
+  '/who-we-are/leadership': typeof WhoWeAreLeadershipRoute
+  '/who-we-are/overview': typeof WhoWeAreOverviewRoute
+  '/what-we-do/industries/financial-services': typeof WhatWeDoIndustriesFinancialServicesRoute
+  '/what-we-do/industries/government': typeof WhatWeDoIndustriesGovernmentRoute
+  '/what-we-do/industries/higher-education': typeof WhatWeDoIndustriesHigherEducationRoute
+  '/what-we-do/industries/insurance': typeof WhatWeDoIndustriesInsuranceRoute
+  '/what-we-do/industries/manufacturing': typeof WhatWeDoIndustriesManufacturingRoute
+  '/what-we-do/industries/non-profit': typeof WhatWeDoIndustriesNonProfitRoute
+  '/what-we-do/industries/pharmaceuticals': typeof WhatWeDoIndustriesPharmaceuticalsRoute
+  '/what-we-do/industries/research-development': typeof WhatWeDoIndustriesResearchDevelopmentRoute
+  '/what-we-do/industries/retail': typeof WhatWeDoIndustriesRetailRoute
+  '/what-we-do/industries/telecommunications': typeof WhatWeDoIndustriesTelecommunicationsRoute
+  '/what-we-do/services/cloud-services': typeof WhatWeDoServicesCloudServicesRoute
+  '/what-we-do/services/cyber-security': typeof WhatWeDoServicesCyberSecurityRoute
+  '/what-we-do/services/data-services': typeof WhatWeDoServicesDataServicesRoute
+  '/what-we-do/services/digital-transformation': typeof WhatWeDoServicesDigitalTransformationRoute
+  '/what-we-do/services/it-implementation-and-integration': typeof WhatWeDoServicesItImplementationAndIntegrationRoute
+  '/what-we-do/services/it-strategy-and-planning': typeof WhatWeDoServicesItStrategyAndPlanningRoute
+  '/what-we-do/services/managed-it-services': typeof WhatWeDoServicesManagedItServicesRoute
+  '/what-we-do/services/other-specialized-services': typeof WhatWeDoServicesOtherSpecializedServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/what-we-do'
+    | '/careers/explore-jobs'
+    | '/careers/faq'
+    | '/careers/why-alpha'
+    | '/what-we-do/industries'
+    | '/what-we-do/products'
+    | '/what-we-do/services'
+    | '/who-we-are/about-us'
+    | '/who-we-are/global-presence'
+    | '/who-we-are/leadership'
+    | '/who-we-are/overview'
+    | '/what-we-do/industries/financial-services'
+    | '/what-we-do/industries/government'
+    | '/what-we-do/industries/higher-education'
+    | '/what-we-do/industries/insurance'
+    | '/what-we-do/industries/manufacturing'
+    | '/what-we-do/industries/non-profit'
+    | '/what-we-do/industries/pharmaceuticals'
+    | '/what-we-do/industries/research-development'
+    | '/what-we-do/industries/retail'
+    | '/what-we-do/industries/telecommunications'
+    | '/what-we-do/services/cloud-services'
+    | '/what-we-do/services/cyber-security'
+    | '/what-we-do/services/data-services'
+    | '/what-we-do/services/digital-transformation'
+    | '/what-we-do/services/it-implementation-and-integration'
+    | '/what-we-do/services/it-strategy-and-planning'
+    | '/what-we-do/services/managed-it-services'
+    | '/what-we-do/services/other-specialized-services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/what-we-do'
+    | '/careers/explore-jobs'
+    | '/careers/faq'
+    | '/careers/why-alpha'
+    | '/what-we-do/industries'
+    | '/what-we-do/products'
+    | '/what-we-do/services'
+    | '/who-we-are/about-us'
+    | '/who-we-are/global-presence'
+    | '/who-we-are/leadership'
+    | '/who-we-are/overview'
+    | '/what-we-do/industries/financial-services'
+    | '/what-we-do/industries/government'
+    | '/what-we-do/industries/higher-education'
+    | '/what-we-do/industries/insurance'
+    | '/what-we-do/industries/manufacturing'
+    | '/what-we-do/industries/non-profit'
+    | '/what-we-do/industries/pharmaceuticals'
+    | '/what-we-do/industries/research-development'
+    | '/what-we-do/industries/retail'
+    | '/what-we-do/industries/telecommunications'
+    | '/what-we-do/services/cloud-services'
+    | '/what-we-do/services/cyber-security'
+    | '/what-we-do/services/data-services'
+    | '/what-we-do/services/digital-transformation'
+    | '/what-we-do/services/it-implementation-and-integration'
+    | '/what-we-do/services/it-strategy-and-planning'
+    | '/what-we-do/services/managed-it-services'
+    | '/what-we-do/services/other-specialized-services'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/what-we-do'
+    | '/careers/explore-jobs'
+    | '/careers/faq'
+    | '/careers/why-alpha'
+    | '/what-we-do/industries'
+    | '/what-we-do/products'
+    | '/what-we-do/services'
+    | '/who-we-are/about-us'
+    | '/who-we-are/global-presence'
+    | '/who-we-are/leadership'
+    | '/who-we-are/overview'
+    | '/what-we-do/industries/financial-services'
+    | '/what-we-do/industries/government'
+    | '/what-we-do/industries/higher-education'
+    | '/what-we-do/industries/insurance'
+    | '/what-we-do/industries/manufacturing'
+    | '/what-we-do/industries/non-profit'
+    | '/what-we-do/industries/pharmaceuticals'
+    | '/what-we-do/industries/research-development'
+    | '/what-we-do/industries/retail'
+    | '/what-we-do/industries/telecommunications'
+    | '/what-we-do/services/cloud-services'
+    | '/what-we-do/services/cyber-security'
+    | '/what-we-do/services/data-services'
+    | '/what-we-do/services/digital-transformation'
+    | '/what-we-do/services/it-implementation-and-integration'
+    | '/what-we-do/services/it-strategy-and-planning'
+    | '/what-we-do/services/managed-it-services'
+    | '/what-we-do/services/other-specialized-services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  WhatWeDoRoute: typeof WhatWeDoRouteWithChildren
+  CareersExploreJobsRoute: typeof CareersExploreJobsRoute
+  CareersFaqRoute: typeof CareersFaqRoute
+  CareersWhyAlphaRoute: typeof CareersWhyAlphaRoute
+  WhoWeAreAboutUsRoute: typeof WhoWeAreAboutUsRoute
+  WhoWeAreGlobalPresenceRoute: typeof WhoWeAreGlobalPresenceRoute
+  WhoWeAreLeadershipRoute: typeof WhoWeAreLeadershipRoute
+  WhoWeAreOverviewRoute: typeof WhoWeAreOverviewRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,12 +439,321 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-do': {
+      id: '/what-we-do'
+      path: '/what-we-do'
+      fullPath: '/what-we-do'
+      preLoaderRoute: typeof WhatWeDoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers/explore-jobs': {
+      id: '/careers/explore-jobs'
+      path: '/careers/explore-jobs'
+      fullPath: '/careers/explore-jobs'
+      preLoaderRoute: typeof CareersExploreJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers/faq': {
+      id: '/careers/faq'
+      path: '/careers/faq'
+      fullPath: '/careers/faq'
+      preLoaderRoute: typeof CareersFaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers/why-alpha': {
+      id: '/careers/why-alpha'
+      path: '/careers/why-alpha'
+      fullPath: '/careers/why-alpha'
+      preLoaderRoute: typeof CareersWhyAlphaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-do/industries': {
+      id: '/what-we-do/industries'
+      path: '/industries'
+      fullPath: '/what-we-do/industries'
+      preLoaderRoute: typeof WhatWeDoIndustriesRouteImport
+      parentRoute: typeof WhatWeDoRoute
+    }
+    '/what-we-do/products': {
+      id: '/what-we-do/products'
+      path: '/products'
+      fullPath: '/what-we-do/products'
+      preLoaderRoute: typeof WhatWeDoProductsRouteImport
+      parentRoute: typeof WhatWeDoRoute
+    }
+    '/what-we-do/services': {
+      id: '/what-we-do/services'
+      path: '/services'
+      fullPath: '/what-we-do/services'
+      preLoaderRoute: typeof WhatWeDoServicesRouteImport
+      parentRoute: typeof WhatWeDoRoute
+    }
+    '/who-we-are/about-us': {
+      id: '/who-we-are/about-us'
+      path: '/who-we-are/about-us'
+      fullPath: '/who-we-are/about-us'
+      preLoaderRoute: typeof WhoWeAreAboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/who-we-are/global-presence': {
+      id: '/who-we-are/global-presence'
+      path: '/who-we-are/global-presence'
+      fullPath: '/who-we-are/global-presence'
+      preLoaderRoute: typeof WhoWeAreGlobalPresenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/who-we-are/leadership': {
+      id: '/who-we-are/leadership'
+      path: '/who-we-are/leadership'
+      fullPath: '/who-we-are/leadership'
+      preLoaderRoute: typeof WhoWeAreLeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/who-we-are/overview': {
+      id: '/who-we-are/overview'
+      path: '/who-we-are/overview'
+      fullPath: '/who-we-are/overview'
+      preLoaderRoute: typeof WhoWeAreOverviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-do/industries/financial-services': {
+      id: '/what-we-do/industries/financial-services'
+      path: '/financial-services'
+      fullPath: '/what-we-do/industries/financial-services'
+      preLoaderRoute: typeof WhatWeDoIndustriesFinancialServicesRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/government': {
+      id: '/what-we-do/industries/government'
+      path: '/government'
+      fullPath: '/what-we-do/industries/government'
+      preLoaderRoute: typeof WhatWeDoIndustriesGovernmentRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/higher-education': {
+      id: '/what-we-do/industries/higher-education'
+      path: '/higher-education'
+      fullPath: '/what-we-do/industries/higher-education'
+      preLoaderRoute: typeof WhatWeDoIndustriesHigherEducationRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/insurance': {
+      id: '/what-we-do/industries/insurance'
+      path: '/insurance'
+      fullPath: '/what-we-do/industries/insurance'
+      preLoaderRoute: typeof WhatWeDoIndustriesInsuranceRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/manufacturing': {
+      id: '/what-we-do/industries/manufacturing'
+      path: '/manufacturing'
+      fullPath: '/what-we-do/industries/manufacturing'
+      preLoaderRoute: typeof WhatWeDoIndustriesManufacturingRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/non-profit': {
+      id: '/what-we-do/industries/non-profit'
+      path: '/non-profit'
+      fullPath: '/what-we-do/industries/non-profit'
+      preLoaderRoute: typeof WhatWeDoIndustriesNonProfitRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/pharmaceuticals': {
+      id: '/what-we-do/industries/pharmaceuticals'
+      path: '/pharmaceuticals'
+      fullPath: '/what-we-do/industries/pharmaceuticals'
+      preLoaderRoute: typeof WhatWeDoIndustriesPharmaceuticalsRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/research-development': {
+      id: '/what-we-do/industries/research-development'
+      path: '/research-development'
+      fullPath: '/what-we-do/industries/research-development'
+      preLoaderRoute: typeof WhatWeDoIndustriesResearchDevelopmentRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/retail': {
+      id: '/what-we-do/industries/retail'
+      path: '/retail'
+      fullPath: '/what-we-do/industries/retail'
+      preLoaderRoute: typeof WhatWeDoIndustriesRetailRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/industries/telecommunications': {
+      id: '/what-we-do/industries/telecommunications'
+      path: '/telecommunications'
+      fullPath: '/what-we-do/industries/telecommunications'
+      preLoaderRoute: typeof WhatWeDoIndustriesTelecommunicationsRouteImport
+      parentRoute: typeof WhatWeDoIndustriesRoute
+    }
+    '/what-we-do/services/cloud-services': {
+      id: '/what-we-do/services/cloud-services'
+      path: '/cloud-services'
+      fullPath: '/what-we-do/services/cloud-services'
+      preLoaderRoute: typeof WhatWeDoServicesCloudServicesRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/cyber-security': {
+      id: '/what-we-do/services/cyber-security'
+      path: '/cyber-security'
+      fullPath: '/what-we-do/services/cyber-security'
+      preLoaderRoute: typeof WhatWeDoServicesCyberSecurityRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/data-services': {
+      id: '/what-we-do/services/data-services'
+      path: '/data-services'
+      fullPath: '/what-we-do/services/data-services'
+      preLoaderRoute: typeof WhatWeDoServicesDataServicesRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/digital-transformation': {
+      id: '/what-we-do/services/digital-transformation'
+      path: '/digital-transformation'
+      fullPath: '/what-we-do/services/digital-transformation'
+      preLoaderRoute: typeof WhatWeDoServicesDigitalTransformationRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/it-implementation-and-integration': {
+      id: '/what-we-do/services/it-implementation-and-integration'
+      path: '/it-implementation-and-integration'
+      fullPath: '/what-we-do/services/it-implementation-and-integration'
+      preLoaderRoute: typeof WhatWeDoServicesItImplementationAndIntegrationRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/it-strategy-and-planning': {
+      id: '/what-we-do/services/it-strategy-and-planning'
+      path: '/it-strategy-and-planning'
+      fullPath: '/what-we-do/services/it-strategy-and-planning'
+      preLoaderRoute: typeof WhatWeDoServicesItStrategyAndPlanningRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/managed-it-services': {
+      id: '/what-we-do/services/managed-it-services'
+      path: '/managed-it-services'
+      fullPath: '/what-we-do/services/managed-it-services'
+      preLoaderRoute: typeof WhatWeDoServicesManagedItServicesRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/other-specialized-services': {
+      id: '/what-we-do/services/other-specialized-services'
+      path: '/other-specialized-services'
+      fullPath: '/what-we-do/services/other-specialized-services'
+      preLoaderRoute: typeof WhatWeDoServicesOtherSpecializedServicesRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
   }
 }
 
+interface WhatWeDoIndustriesRouteChildren {
+  WhatWeDoIndustriesFinancialServicesRoute: typeof WhatWeDoIndustriesFinancialServicesRoute
+  WhatWeDoIndustriesGovernmentRoute: typeof WhatWeDoIndustriesGovernmentRoute
+  WhatWeDoIndustriesHigherEducationRoute: typeof WhatWeDoIndustriesHigherEducationRoute
+  WhatWeDoIndustriesInsuranceRoute: typeof WhatWeDoIndustriesInsuranceRoute
+  WhatWeDoIndustriesManufacturingRoute: typeof WhatWeDoIndustriesManufacturingRoute
+  WhatWeDoIndustriesNonProfitRoute: typeof WhatWeDoIndustriesNonProfitRoute
+  WhatWeDoIndustriesPharmaceuticalsRoute: typeof WhatWeDoIndustriesPharmaceuticalsRoute
+  WhatWeDoIndustriesResearchDevelopmentRoute: typeof WhatWeDoIndustriesResearchDevelopmentRoute
+  WhatWeDoIndustriesRetailRoute: typeof WhatWeDoIndustriesRetailRoute
+  WhatWeDoIndustriesTelecommunicationsRoute: typeof WhatWeDoIndustriesTelecommunicationsRoute
+}
+
+const WhatWeDoIndustriesRouteChildren: WhatWeDoIndustriesRouteChildren = {
+  WhatWeDoIndustriesFinancialServicesRoute:
+    WhatWeDoIndustriesFinancialServicesRoute,
+  WhatWeDoIndustriesGovernmentRoute: WhatWeDoIndustriesGovernmentRoute,
+  WhatWeDoIndustriesHigherEducationRoute:
+    WhatWeDoIndustriesHigherEducationRoute,
+  WhatWeDoIndustriesInsuranceRoute: WhatWeDoIndustriesInsuranceRoute,
+  WhatWeDoIndustriesManufacturingRoute: WhatWeDoIndustriesManufacturingRoute,
+  WhatWeDoIndustriesNonProfitRoute: WhatWeDoIndustriesNonProfitRoute,
+  WhatWeDoIndustriesPharmaceuticalsRoute:
+    WhatWeDoIndustriesPharmaceuticalsRoute,
+  WhatWeDoIndustriesResearchDevelopmentRoute:
+    WhatWeDoIndustriesResearchDevelopmentRoute,
+  WhatWeDoIndustriesRetailRoute: WhatWeDoIndustriesRetailRoute,
+  WhatWeDoIndustriesTelecommunicationsRoute:
+    WhatWeDoIndustriesTelecommunicationsRoute,
+}
+
+const WhatWeDoIndustriesRouteWithChildren =
+  WhatWeDoIndustriesRoute._addFileChildren(WhatWeDoIndustriesRouteChildren)
+
+interface WhatWeDoServicesRouteChildren {
+  WhatWeDoServicesCloudServicesRoute: typeof WhatWeDoServicesCloudServicesRoute
+  WhatWeDoServicesCyberSecurityRoute: typeof WhatWeDoServicesCyberSecurityRoute
+  WhatWeDoServicesDataServicesRoute: typeof WhatWeDoServicesDataServicesRoute
+  WhatWeDoServicesDigitalTransformationRoute: typeof WhatWeDoServicesDigitalTransformationRoute
+  WhatWeDoServicesItImplementationAndIntegrationRoute: typeof WhatWeDoServicesItImplementationAndIntegrationRoute
+  WhatWeDoServicesItStrategyAndPlanningRoute: typeof WhatWeDoServicesItStrategyAndPlanningRoute
+  WhatWeDoServicesManagedItServicesRoute: typeof WhatWeDoServicesManagedItServicesRoute
+  WhatWeDoServicesOtherSpecializedServicesRoute: typeof WhatWeDoServicesOtherSpecializedServicesRoute
+}
+
+const WhatWeDoServicesRouteChildren: WhatWeDoServicesRouteChildren = {
+  WhatWeDoServicesCloudServicesRoute: WhatWeDoServicesCloudServicesRoute,
+  WhatWeDoServicesCyberSecurityRoute: WhatWeDoServicesCyberSecurityRoute,
+  WhatWeDoServicesDataServicesRoute: WhatWeDoServicesDataServicesRoute,
+  WhatWeDoServicesDigitalTransformationRoute:
+    WhatWeDoServicesDigitalTransformationRoute,
+  WhatWeDoServicesItImplementationAndIntegrationRoute:
+    WhatWeDoServicesItImplementationAndIntegrationRoute,
+  WhatWeDoServicesItStrategyAndPlanningRoute:
+    WhatWeDoServicesItStrategyAndPlanningRoute,
+  WhatWeDoServicesManagedItServicesRoute:
+    WhatWeDoServicesManagedItServicesRoute,
+  WhatWeDoServicesOtherSpecializedServicesRoute:
+    WhatWeDoServicesOtherSpecializedServicesRoute,
+}
+
+const WhatWeDoServicesRouteWithChildren =
+  WhatWeDoServicesRoute._addFileChildren(WhatWeDoServicesRouteChildren)
+
+interface WhatWeDoRouteChildren {
+  WhatWeDoIndustriesRoute: typeof WhatWeDoIndustriesRouteWithChildren
+  WhatWeDoProductsRoute: typeof WhatWeDoProductsRoute
+  WhatWeDoServicesRoute: typeof WhatWeDoServicesRouteWithChildren
+}
+
+const WhatWeDoRouteChildren: WhatWeDoRouteChildren = {
+  WhatWeDoIndustriesRoute: WhatWeDoIndustriesRouteWithChildren,
+  WhatWeDoProductsRoute: WhatWeDoProductsRoute,
+  WhatWeDoServicesRoute: WhatWeDoServicesRouteWithChildren,
+}
+
+const WhatWeDoRouteWithChildren = WhatWeDoRoute._addFileChildren(
+  WhatWeDoRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  WhatWeDoRoute: WhatWeDoRouteWithChildren,
+  CareersExploreJobsRoute: CareersExploreJobsRoute,
+  CareersFaqRoute: CareersFaqRoute,
+  CareersWhyAlphaRoute: CareersWhyAlphaRoute,
+  WhoWeAreAboutUsRoute: WhoWeAreAboutUsRoute,
+  WhoWeAreGlobalPresenceRoute: WhoWeAreGlobalPresenceRoute,
+  WhoWeAreLeadershipRoute: WhoWeAreLeadershipRoute,
+  WhoWeAreOverviewRoute: WhoWeAreOverviewRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

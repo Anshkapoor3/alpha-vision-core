@@ -9,38 +9,38 @@ import { Reveal } from "./Reveal";
 const cases = [
   {
     image: caseData,
-    sector: "Global Insurance",
-    title: "Claims settled in hours, not weeks",
-    challenge: "Eleven claims platforms across four continents, none of which agreed on what a claim was.",
-    solution: "A single lakehouse on Databricks with an agentic triage layer sitting in front of adjusters.",
+    sector: "Banking & Finance",
+    title: "AI-powered analytics for a financial institution",
+    challenge: "A financial institution needed to transform raw data into actionable insights for faster, smarter decision-making.",
+    solution: "Alpha delivered a data & analytics platform with business intelligence dashboards, data engineering, and AI-driven insights.",
     metrics: [
-      { k: "Cycle time", v: "-71%" },
-      { k: "Annual run cost", v: "-$24M" },
-      { k: "Straight-through rate", v: "63%" },
+      { k: "Decision speed", v: "5x" },
+      { k: "Data accuracy", v: "99%" },
+      { k: "ROI", v: "+40%" },
     ],
   },
   {
     image: caseSecure,
-    sector: "Tier-1 Banking",
-    title: "A zero-trust estate that passed audit first time",
-    challenge: "A legacy perimeter model failing three regulatory control domains ahead of a licence review.",
-    solution: "Identity-first re-architecture with continuous control monitoring wired into the board pack.",
+    sector: "Healthcare",
+    title: "Enterprise cybersecurity for a hospital network",
+    challenge: "A multi-site hospital network required enterprise-grade security to protect patient data and ensure compliance.",
+    solution: "Alpha implemented comprehensive cybersecurity with security assessments, endpoint protection, and 24/7 threat monitoring.",
     metrics: [
-      { k: "Findings closed", v: "148" },
-      { k: "Mean detection", v: "4 min" },
-      { k: "Audit result", v: "Clean" },
+      { k: "Uptime", v: "99.9%" },
+      { k: "Threats blocked", v: "10K+" },
+      { k: "Compliance", v: "HIPAA" },
     ],
   },
   {
     image: caseAi,
-    sector: "Health Systems",
-    title: "Clinical knowledge, retrieved safely",
-    challenge: "Thirty years of protocol documents clinicians could not search during a patient encounter.",
-    solution: "A governed RAG platform inside the hospital's own tenancy, with citation-level traceability.",
+    sector: "Retail & E-commerce",
+    title: "Custom software for a global retailer",
+    challenge: "A global retailer needed a scalable e-commerce platform to handle growing demand and improve customer experience.",
+    solution: "Alpha built a custom software solution with seamless integration, cloud infrastructure, and performance optimization.",
     metrics: [
-      { k: "Search time", v: "-88%" },
-      { k: "Answer accuracy", v: "96.4%" },
-      { k: "Clinicians live", v: "12,000" },
+      { k: "Conversion", v: "+35%" },
+      { k: "Load time", v: "-60%" },
+      { k: "Scalability", v: "10x" },
     ],
   },
 ];
@@ -54,7 +54,7 @@ export function CaseStudies() {
           eyebrow="Selected work"
           title={
             <>
-              Evidence, <span className="text-gradient">not adjectives</span>
+              Results that <span className="text-gradient">speak for themselves</span>
             </>
           }
         />

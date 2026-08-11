@@ -4,33 +4,33 @@ import { SectionHeading } from "./SectionHeading";
 
 const phases = [
   {
-    step: "Phase 01",
-    title: "Diagnose",
-    copy: "Six weeks inside your estate. We map spend, risk, dependency and velocity, then quantify what standing still costs you.",
-    marker: "Week 0–6",
+    step: "Step 01",
+    title: "Discover",
+    copy: "Understand your business goals, challenges, and requirements.",
+    marker: "Kickoff",
   },
   {
-    step: "Phase 02",
-    title: "Architect",
-    copy: "A target architecture your CFO can read and your engineers can build. Every decision carries a business case.",
-    marker: "Week 6–12",
+    step: "Step 02",
+    title: "Design",
+    copy: "Create a scalable solution architecture and implementation strategy.",
+    marker: "Architecture",
   },
   {
-    step: "Phase 03",
-    title: "Migrate",
-    copy: "Wave-based execution from a dedicated factory. Cutovers rehearsed, rollback proven, zero unplanned downtime.",
-    marker: "Month 3–9",
+    step: "Step 03",
+    title: "Develop",
+    copy: "Build secure, reliable, and high-performance software solutions.",
+    marker: "Build",
   },
   {
-    step: "Phase 04",
-    title: "Operate",
-    copy: "A named pod assumes ownership under outcome SLAs. Uptime, cost and change velocity become our problem.",
-    marker: "Month 9+",
+    step: "Step 04",
+    title: "Deploy",
+    copy: "Launch and integrate the solution into your existing environment.",
+    marker: "Launch",
   },
   {
-    step: "Phase 05",
-    title: "Compound",
-    copy: "Automation and AI applied to the operating baseline — each quarter costs less and moves faster than the last.",
+    step: "Step 05",
+    title: "Support",
+    copy: "Provide continuous monitoring, maintenance, optimization, and technical support.",
     marker: "Ongoing",
   },
 ];
@@ -48,10 +48,10 @@ export function Journey() {
           <div className="mx-auto w-[min(1400px,92vw)]">
             <SectionHeading
               index="03"
-              eyebrow="Digital transformation journey"
+              eyebrow="Business Process"
               title={
                 <>
-                  How an estate becomes <span className="text-gradient">an advantage</span>
+                  From discovery to <span className="text-gradient">ongoing support</span>
                 </>
               }
             />

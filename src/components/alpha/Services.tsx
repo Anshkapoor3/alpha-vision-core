@@ -1,45 +1,45 @@
 import { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { Cloud, Database, Cpu, ShieldHalf, Workflow, Headset } from "lucide-react";
+import { Cloud, Cpu, Database, Headset, ServerCog, Shield, Code2 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
 const services = [
   {
-    icon: Cloud,
-    title: "Cloud & Platform Engineering",
-    copy: "Landing zones, migrations and FinOps discipline on AWS and Azure — built once, governed forever.",
-    points: ["Landing zone design", "Migration factory", "Cost engineering"],
-  },
-  {
-    icon: Database,
-    title: "Data Foundations",
-    copy: "Snowflake and Databricks estates that make one number mean one thing across the entire business.",
-    points: ["Lakehouse architecture", "Governance", "Real-time pipelines"],
+    icon: Code2,
+    title: "Custom Software Development",
+    copy: "Scalable web, mobile, and enterprise applications tailored to your business objectives.",
+    points: ["Web applications", "Mobile apps", "Enterprise software"],
   },
   {
     icon: Cpu,
-    title: "Applied AI & Agents",
-    copy: "RAG systems, evaluation harnesses and agentic workflows deployed inside your compliance perimeter.",
-    points: ["LLM platforms", "Agentic automation", "Model assurance"],
+    title: "Artificial Intelligence Solutions",
+    copy: "AI-powered automation, machine learning, predictive analytics, intelligent chatbots, and computer vision solutions.",
+    points: ["AI automation", "Machine learning", "Intelligent chatbots"],
   },
   {
-    icon: ShieldHalf,
-    title: "Cyber & Compliance",
-    copy: "Zero-trust architecture and continuous control monitoring mapped to the frameworks your auditors use.",
-    points: ["Zero trust", "SOC operations", "Audit readiness"],
+    icon: Cloud,
+    title: "Cloud Solutions",
+    copy: "Cloud migration, infrastructure management, DevOps, backup, disaster recovery, and cloud optimization.",
+    points: ["Cloud migration", "DevOps", "Disaster recovery"],
   },
   {
-    icon: Workflow,
-    title: "Application Modernisation",
-    copy: "Legacy estates decomposed into services your teams can ship weekly instead of quarterly.",
-    points: ["Domain decomposition", "API layers", "DevSecOps"],
+    icon: ServerCog,
+    title: "Managed IT Services",
+    copy: "24/7 monitoring, IT support, infrastructure management, system maintenance, and performance optimization.",
+    points: ["24/7 monitoring", "IT support", "Performance optimization"],
   },
   {
-    icon: Headset,
-    title: "Managed Operations",
-    copy: "A named engineering pod that owns uptime, change and cost against contractual outcomes.",
-    points: ["24/7 NOC", "SRE practice", "Outcome SLAs"],
+    icon: Shield,
+    title: "Cybersecurity",
+    copy: "Security assessments, endpoint protection, vulnerability management, compliance, and threat monitoring.",
+    points: ["Security assessments", "Endpoint protection", "Threat monitoring"],
+  },
+  {
+    icon: Database,
+    title: "Data & Analytics",
+    copy: "Business intelligence dashboards, reporting, data engineering, analytics, and data-driven decision support.",
+    points: ["BI dashboards", "Data engineering", "Analytics"],
   },
 ];
 
@@ -87,19 +87,17 @@ export function Services() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <SectionHeading
             index="02"
-            eyebrow="Capabilities"
+            eyebrow="Our Services"
             title={
               <>
-                Six disciplines.
-                <br />
-                <span className="text-gradient">One accountable partner.</span>
+                Complete technology <span className="text-gradient">solutions</span>
               </>
             }
           />
           <Reveal delay={0.12}>
             <p className="text-lg leading-relaxed text-muted-foreground lg:pb-4">
-              Most vendors sell you a resource. Alpha signs up to a result. Each capability below runs against
-              contractual outcomes — availability, cost, velocity, risk — reviewed with your board every quarter.
+              From custom software to AI-powered automation, we deliver end-to-end technology
+              solutions that drive efficiency, security, and growth for your business.
             </p>
           </Reveal>
         </div>

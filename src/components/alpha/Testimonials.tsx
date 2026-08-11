@@ -6,23 +6,23 @@ import { SectionHeading } from "./SectionHeading";
 const quotes = [
   {
     quote:
-      "They inherited an estate three vendors had already failed to stabilise. Eleven months later our board stopped talking about infrastructure entirely.",
-    name: "Elena Marchetti",
-    role: "Group CIO, Northbank",
+      "Alpha ITMS delivered a custom software solution that transformed our operations. Their team understood our requirements and exceeded every expectation.",
+    name: "Sarah Mitchell",
+    role: "CIO, Meridian Health",
     length: "2:14",
   },
   {
     quote:
-      "Alpha is the only partner who arrived with a number attached to every recommendation, then held themselves to it in writing.",
-    name: "Daniel Okoro",
-    role: "COO, Meridian Health",
+      "The AI-powered automation Alpha built for us has been a game-changer. Response times improved dramatically and our team can focus on higher-value work.",
+    name: "James Chen",
+    role: "COO, Northbank Financial",
     length: "3:02",
   },
   {
     quote:
-      "Our AI programme had been stuck in pilot for two years. They shipped a governed platform in one quarter and the regulator signed off.",
-    name: "Priya Raghavan",
-    role: "Chief Data Officer, Stratos Telecom",
+      "From cloud migration to cybersecurity, Alpha has been an exceptional partner. Their solutions are secure, scalable, and delivered measurable business outcomes.",
+    name: "Amara Okafor",
+    role: "CTO, Stratos Telecom",
     length: "1:48",
   },
 ];
@@ -36,7 +36,7 @@ export function Testimonials() {
   return (
     <section className="relative py-32 lg:py-44">
       <div className="mx-auto w-[min(1400px,92vw)]">
-        <SectionHeading index="08" eyebrow="Client voice" title="What partnership sounds like" />
+        <SectionHeading index="08" eyebrow="Client voice" title="Trusted by businesses worldwide" />
 
         <div className="mt-20 grid gap-10 lg:grid-cols-[1.3fr_0.7fr] lg:items-stretch">
           <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-border p-10 lg:p-16">

@@ -3,16 +3,17 @@ import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
 const rings = [
-  { radius: 78, duration: 44, items: ["AWS", "Azure", "Kubernetes", "Docker"] },
-  { radius: 128, duration: 62, items: ["Snowflake", "Databricks", "Python", "React", "Terraform"] },
-  { radius: 180, duration: 84, items: ["LLMs", "RAG", "Agents", "MLOps", "Vector", "GenAI"] },
+  { radius: 78, duration: 44, items: ["AWS", "Azure", "Google Cloud", "Docker"] },
+  { radius: 128, duration: 62, items: ["Python", "Java", ".NET", "React", "Angular"] },
+  { radius: 180, duration: 84, items: ["AI & ML", "Node.js", "Flutter", "Kubernetes", "SQL", "NoSQL"] },
 ];
 
 const groups = [
-  { title: "Cloud", items: ["AWS", "Azure", "Kubernetes", "Docker", "Terraform"] },
-  { title: "Data", items: ["Snowflake", "Databricks", "Kafka", "dbt", "Airflow"] },
-  { title: "Intelligence", items: ["LLMs", "RAG", "Agentic AI", "Machine Learning", "Vector search"] },
-  { title: "Product", items: ["React", "TypeScript", "Python", "Go", "GraphQL"] },
+  { title: "Artificial Intelligence", items: ["AI & Machine Learning", "Predictive Analytics", "Intelligent Chatbots", "Computer Vision"] },
+  { title: "Languages", items: ["Python", "Java", ".NET", "Node.js"] },
+  { title: "Frontend", items: ["React", "Angular", "Flutter"] },
+  { title: "Cloud & Infrastructure", items: ["AWS", "Microsoft Azure", "Google Cloud", "Docker", "Kubernetes"] },
+  { title: "Data", items: ["SQL Databases", "NoSQL Databases", "Data Engineering", "Analytics"] },
 ];
 
 export function Ecosystem() {
@@ -22,13 +23,13 @@ export function Ecosystem() {
       <div className="relative mx-auto w-[min(1400px,92vw)]">
         <SectionHeading
           index="05"
-          eyebrow="Technology ecosystem"
+          eyebrow="Technology Stack"
           title={
             <>
-              A stack chosen for <span className="text-gradient">longevity</span>
+              Built on the <span className="text-gradient">best technology</span>
             </>
           }
-          lede="No exotic dependencies, no vendor theatre. We build on the platforms that will still be supported when your five-year plan matures."
+          lede="We leverage industry-leading technologies across AI, cloud, and software development to deliver secure, scalable, and high-performance solutions."
           align="center"
         />
 

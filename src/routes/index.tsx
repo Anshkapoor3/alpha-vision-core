@@ -10,13 +10,12 @@ import { Ecosystem } from "@/components/alpha/Ecosystem";
 import { CaseStudies } from "@/components/alpha/CaseStudies";
 import { WhyAlpha } from "@/components/alpha/WhyAlpha";
 import { Testimonials } from "@/components/alpha/Testimonials";
-import { Training } from "@/components/alpha/Training";
 import { Contact } from "@/components/alpha/Contact";
 import { Footer } from "@/components/alpha/Footer";
 
-const title = "Alpha IT Managed Services — Enterprise Cloud, Data & AI Operations";
+const title = "Alpha ITMS — Transforming Businesses Through Intelligent Technology";
 const description =
-  "Alpha runs the cloud, data and AI systems regulated enterprises cannot afford to get wrong. Outcome-based managed services across 27 countries.";
+  "Alpha ITMS delivers enterprise-grade IT solutions, AI-powered automation, cloud services, software development, cybersecurity, and digital transformation to help organizations innovate, scale, and stay ahead.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -69,7 +68,6 @@ function Index() {
         <CaseStudies />
         <WhyAlpha />
         <Testimonials />
-        <Training />
         <Contact />
       </main>
       <Footer />

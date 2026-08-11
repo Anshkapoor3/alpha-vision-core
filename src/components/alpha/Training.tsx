@@ -4,10 +4,10 @@ import { Reveal } from "./Reveal";
 import { MagneticButton } from "./MagneticButton";
 
 const tracks = [
-  { title: "Cloud Architect Path", weeks: "12 weeks", cohort: "AWS · Azure", seats: "18 per cohort" },
-  { title: "Data Engineering Path", weeks: "10 weeks", cohort: "Snowflake · Databricks", seats: "20 per cohort" },
-  { title: "Applied AI Path", weeks: "8 weeks", cohort: "LLMs · RAG · Agents", seats: "16 per cohort" },
-  { title: "Secure Operations Path", weeks: "6 weeks", cohort: "Zero trust · SOC", seats: "24 per cohort" },
+  { title: "Cloud Computing", weeks: "12 weeks", cohort: "AWS · Azure", seats: "18 per cohort" },
+  { title: "Cyber Security", weeks: "10 weeks", cohort: "Security · Compliance", seats: "20 per cohort" },
+  { title: "Data Analytics", weeks: "8 weeks", cohort: "Data · Analytics", seats: "16 per cohort" },
+  { title: "Software Development", weeks: "6 weeks", cohort: "Development · DevOps", seats: "24 per cohort" },
 ];
 
 export function Training() {
@@ -17,18 +17,18 @@ export function Training() {
         <div>
           <SectionHeading
             index="09"
-            eyebrow="Alpha Academy"
+            eyebrow="IT Training"
             title={
               <>
                 We leave behind <span className="text-gradient">capability</span>
               </>
             }
-            lede="Every engagement includes structured enablement for your own teams. When our pod steps back, nothing degrades — because your engineers already run it."
+            lede="Alpha IT Training empowers your teams with the skills they need to succeed in today's technology landscape. From cloud to security, we build capability that lasts."
           />
           <Reveal delay={0.2}>
             <div className="mt-12">
-              <MagneticButton href="#contact" variant="ghost">
-                Request the curriculum
+              <MagneticButton href="https://trainings.alphaitms.com/" variant="ghost">
+                Explore IT Training
               </MagneticButton>
             </div>
           </Reveal>

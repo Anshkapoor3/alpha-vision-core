@@ -1,21 +1,24 @@
-import { Check, Minus } from "lucide-react";
+import { Check } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 import { Counter } from "./Counter";
 
-const rows = [
-  { label: "Commercial model", alpha: "Outcome-based SLAs", others: "Time and materials" },
-  { label: "Team continuity", alpha: "Named pod, multi-year", others: "Rotating bench staff" },
-  { label: "Cost trajectory", alpha: "Declines year over year", others: "Grows with headcount" },
-  { label: "Regulatory posture", alpha: "Evidence generated continuously", others: "Assembled before audit" },
-  { label: "AI adoption", alpha: "Governed, in your tenancy", others: "Pilots that never ship" },
+const reasons = [
+  "Experienced Technology Experts",
+  "Tailored Business Solutions",
+  "Enterprise Security Standards",
+  "AI-Driven Innovation",
+  "Scalable Cloud Infrastructure",
+  "24×7 Technical Support",
+  "Proven Delivery Methodology",
+  "Customer-Centric Approach",
 ];
 
 const counters = [
-  { value: 18, suffix: "", label: "Years operating enterprise estates" },
-  { value: 640, suffix: "+", label: "Engineers and architects" },
-  { value: 31, suffix: "", label: "Industry and partner awards" },
-  { value: 96, suffix: "%", label: "Client retention beyond year three" },
+  { value: 150, suffix: "+", label: "Projects Delivered" },
+  { value: 60, suffix: "+", label: "Enterprise Clients" },
+  { value: 99.9, suffix: "%", decimals: 1, label: "Service Availability" },
+  { value: 24, suffix: "×7", label: "Technical Support" },
 ];
 
 export function WhyAlpha() {
@@ -24,36 +27,24 @@ export function WhyAlpha() {
       <div className="mx-auto w-[min(1400px,92vw)]">
         <SectionHeading
           index="07"
-          eyebrow="Why Alpha"
+          eyebrow="Why Choose Alpha ITMS"
           title={
             <>
-              The difference shows up <span className="text-gradient">in year three</span>
+              The partner that <span className="text-gradient">delivers</span>
             </>
           }
         />
 
         <div className="mt-20 grid gap-14 lg:grid-cols-[1.15fr_0.85fr]">
           <Reveal>
-            <div className="overflow-hidden rounded-[2rem] border border-border">
-              <div className="grid grid-cols-[1.2fr_1fr_1fr] border-b border-border px-8 py-5 text-[0.65rem] tracking-[0.22em] text-muted-foreground">
-                <span />
-                <span className="text-[var(--brand-cyan)]">ALPHA</span>
-                <span>TYPICAL VENDOR</span>
-              </div>
-              {rows.map((r) => (
+            <div className="grid gap-px overflow-hidden rounded-[2rem] border border-border bg-border sm:grid-cols-2">
+              {reasons.map((r) => (
                 <div
-                  key={r.label}
-                  className="grid grid-cols-[1.2fr_1fr_1fr] items-start gap-4 border-b border-border px-8 py-7 text-sm transition-colors duration-500 last:border-b-0 hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)]"
+                  key={r}
+                  className="flex items-start gap-3 bg-background p-7 transition-colors duration-500 hover:bg-secondary"
                 >
-                  <span className="text-muted-foreground">{r.label}</span>
-                  <span className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand-cyan)]" />
-                    {r.alpha}
-                  </span>
-                  <span className="flex items-start gap-2 text-muted-foreground">
-                    <Minus className="mt-0.5 h-4 w-4 shrink-0" />
-                    {r.others}
-                  </span>
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand-cyan)]" />
+                  <span className="text-sm">{r}</span>
                 </div>
               ))}
             </div>
@@ -64,7 +55,7 @@ export function WhyAlpha() {
               <Reveal key={c.label} delay={i * 0.08}>
                 <div className="glass-panel h-full rounded-[1.5rem] p-8">
                   <div className="font-display text-5xl font-medium">
-                    <Counter to={c.value} suffix={c.suffix} />
+                    <Counter to={c.value} suffix={c.suffix} decimals={c.decimals ?? 0} />
                   </div>
                   <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{c.label}</p>
                 </div>

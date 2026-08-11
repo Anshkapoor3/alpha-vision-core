@@ -2,26 +2,30 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import {
   HeartPulse,
-  Landmark,
-  Umbrella,
-  ShoppingBag,
-  Building2,
-  Factory,
   GraduationCap,
-  RadioTower,
+  Factory,
+  ShoppingBag,
+  Landmark,
+  Truck,
+  Building2,
+  Rocket,
+  Hotel,
+  Briefcase,
 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
 const industries = [
-  { icon: HeartPulse, name: "Healthcare", note: "HIPAA-grade platforms for clinical data at scale." },
-  { icon: Landmark, name: "Finance", note: "Sub-second risk systems under continuous audit." },
-  { icon: Umbrella, name: "Insurance", note: "Claims automation that survives regulator scrutiny." },
-  { icon: ShoppingBag, name: "Retail", note: "Demand signals unified across channel and store." },
-  { icon: Building2, name: "Government", note: "Sovereign cloud with accredited control baselines." },
-  { icon: Factory, name: "Manufacturing", note: "OT and IT convergence on the plant floor." },
-  { icon: GraduationCap, name: "Education", note: "Student platforms built for enrolment surges." },
-  { icon: RadioTower, name: "Telecom", note: "Network data lakes feeding real-time assurance." },
+  { icon: HeartPulse, name: "Healthcare", note: "HIPAA-compliant platforms for clinical and operational excellence." },
+  { icon: GraduationCap, name: "Education", note: "Digital learning platforms that enhance student outcomes." },
+  { icon: Factory, name: "Manufacturing", note: "Smart factory solutions that optimize production and supply chains." },
+  { icon: ShoppingBag, name: "Retail & E-commerce", note: "Omnichannel solutions that unify commerce and customer experience." },
+  { icon: Landmark, name: "Banking & Finance", note: "Secure platforms for banking, payments, and financial operations." },
+  { icon: Truck, name: "Logistics & Transportation", note: "Real-time tracking and route optimization for modern logistics." },
+  { icon: Building2, name: "Government", note: "Secure, compliant solutions for public sector operations." },
+  { icon: Rocket, name: "Startups & SMEs", note: "Scalable technology that helps startups launch and grow faster." },
+  { icon: Hotel, name: "Hospitality", note: "Guest-centric digital experiences that elevate hospitality operations." },
+  { icon: Briefcase, name: "Professional Services", note: "Technology that streamlines client service and business operations." },
 ];
 
 export function Industries() {
@@ -32,13 +36,13 @@ export function Industries() {
       <div className="mx-auto w-[min(1400px,92vw)]">
         <SectionHeading
           index="04"
-          eyebrow="Industry expertise"
+          eyebrow="Industries We Serve"
           title={
             <>
-              Regulated sectors, <span className="text-gradient">no learning curve</span>
+              Ten industries, <span className="text-gradient">one standard</span>
             </>
           }
-          lede="We arrive fluent in your controls, your auditors and your failure modes. That is the difference between a consultancy and an operator."
+          lede="Alpha ITMS brings deep domain expertise across ten industries, delivering tailored technology solutions that address the unique challenges of each sector."
         />
 
         <div className="mt-20 grid gap-px overflow-hidden rounded-[2rem] border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
