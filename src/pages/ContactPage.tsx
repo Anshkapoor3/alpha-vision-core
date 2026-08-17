@@ -14,7 +14,11 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    lines: ["ITC-15, IT Park, Sector 67", "Mohali, SAS Nagar", "Mohali, India 160062"],
+    lines: [
+      "IT Park, Plot ITC 15, Sector 67",
+      "Sahibzada Ajit Singh Nagar",
+      "Punjab 160062",
+    ],
   },
   {
     icon: Mail,
@@ -207,9 +211,9 @@ export function ContactPage() {
                     <h3 className="text-2xl font-medium">Visit Us</h3>
                   </div>
                   <div className="space-y-4 text-muted-foreground">
-                    <p className="font-medium text-foreground">ITC-15, IT Park, Sector 67</p>
-                    <p>Mohali, SAS Nagar</p>
-                    <p>Mohali, India 160062</p>
+                    <p className="font-medium text-foreground">IT Park, Plot ITC 15, Sector 67</p>
+                    <p>Sahibzada Ajit Singh Nagar</p>
+                    <p>Punjab 160062</p>
                   </div>
                 </div>
 
@@ -611,13 +615,13 @@ export function ContactPage() {
             <Reveal delay={0.1}>
               <div className="relative aspect-video rounded-[2rem] overflow-hidden border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.123456789!2d76.7!3d30.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb2c1234567%3A0x123456789abcdef!2sITC-15%2C%20IT%20Park%2C%20Sector%2067%2C%20SAS%20Nagar%2C%20Mohali%2C%20Punjab%20160062!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.123456789!2d76.7!3d30.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb2c1234567%3A0x123456789abcdef!2sIT%20Park%2C%20Plot%20ITC%2015%2C%20Sector%2067%2C%20Sahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab%20160062!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Alpha IT Managed Services Location - ITC-15, IT Park, Sector 67, Mohali"
+                  title="Alpha IT Managed Services Location - IT Park, Plot ITC 15, Sector 67, Sahibzada Ajit Singh Nagar"
                   aria-label="Map showing Alpha IT Managed Services location in Mohali, Punjab"
                 ></iframe>
               </div>
@@ -629,7 +633,7 @@ export function ContactPage() {
               {
                 icon: MapPin,
                 title: "Address",
-                value: "ITC-15, IT Park, Sector 67, Mohali, SAS Nagar, Mohali, India 160062",
+                value: "IT Park, Plot ITC 15, Sector 67, Sahibzada Ajit Singh Nagar, Punjab 160062",
               },
               { icon: Mail, title: "Email", value: "it.training@alphait.us" },
               { icon: Phone, title: "Phone", value: "9056739084 / 9056739082" },

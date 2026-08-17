@@ -128,7 +128,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    lines: ["2100 McKinney Ave", "Dallas, Texas 75201"],
+    lines: ["IT Park, Plot ITC 15, Sector 67", "Sahibzada Ajit Singh Nagar, Punjab 160062"],
   },
   {
     icon: Mail,

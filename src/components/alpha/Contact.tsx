@@ -6,7 +6,7 @@ import { Reveal } from "./Reveal";
 import { MagneticButton } from "./MagneticButton";
 
 const offices = [
-  { city: "Dallas", line: "Global HQ · 24/7 operations", detail: "2100 McKinney Ave, Texas" },
+  { city: "Mohali", line: "Global HQ · 24/7 operations", detail: "IT Park, Plot ITC 15, Sector 67" },
   { city: "London", line: "EMEA delivery hub", detail: "One Canada Square, Canary Wharf" },
   { city: "Bengaluru", line: "Engineering centre", detail: "Embassy Tech Village, Devarabeesanahalli" },
   { city: "Singapore", line: "APAC operations", detail: "Marina Bay Financial Centre" },
@@ -88,7 +88,7 @@ export function Contact() {
               <div className="overflow-hidden rounded-[2rem] border border-border">
                 <iframe
                   title="Alpha IT Managed Services global headquarters location"
-                  src="https://www.google.com/maps?q=2100%20McKinney%20Ave%20Dallas%20Texas&output=embed"
+                  src="https://www.google.com/maps?q=IT%20Park%20Plot%20ITC%2015%20Sector%2067%20Sahibzada%20Ajit%20Singh%20Nagar%20Punjab%20160062&output=embed"
                   loading="lazy"
                   className="h-[280px] w-full"
                   style={{ filter: "invert(0.92) hue-rotate(185deg) saturate(0.65) contrast(0.92)" }}
