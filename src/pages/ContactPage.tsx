@@ -76,17 +76,17 @@ export function ContactPage() {
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.name.trim()) newErrors["name"] = "Name is required";
+    if (!formData.email.trim()) newErrors["email"] = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
-      newErrors.email = "Invalid email format";
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+      newErrors["email"] = "Invalid email format";
+    if (!formData.phone.trim()) newErrors["phone"] = "Phone number is required";
     else if (!/^[\d\s+\-()]{10,}$/.test(formData.phone))
-      newErrors.phone = "Valid phone number required";
-    if (!formData.areaOfInterest) newErrors.areaOfInterest = "Please select an area of interest";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
+      newErrors["phone"] = "Valid phone number required";
+    if (!formData.areaOfInterest) newErrors["areaOfInterest"] = "Please select an area of interest";
+    if (!formData.message.trim()) newErrors["message"] = "Message is required";
     else if (formData.message.trim().length < 10)
-      newErrors.message = "Message must be at least 10 characters";
+      newErrors["message"] = "Message must be at least 10 characters";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -344,15 +344,15 @@ export function ContactPage() {
                             placeholder="John Doe"
                             className={cn(
                               "w-full px-4 py-3 rounded-xl border bg-background/70 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-300",
-                              errors.name && "border-red-500 focus-visible:ring-red-500",
+                              errors["name"] && "border-red-500 focus-visible:ring-red-500",
                             )}
-                            aria-invalid={errors.name ? "true" : "false"}
-                            aria-describedby={errors.name ? "name-error" : undefined}
+                            aria-invalid={errors["name"] ? "true" : "false"}
+                            aria-describedby={errors["name"] ? "name-error" : undefined}
                             disabled={status === "submitting"}
                           />
-                          {errors.name && (
+                          {errors["name"] && (
                             <p id="name-error" className="mt-1.5 text-sm text-red-500" role="alert">
-                              {errors.name}
+                              {errors["name"]}
                             </p>
                           )}
                         </div>
@@ -373,19 +373,19 @@ export function ContactPage() {
                             placeholder="john@company.com"
                             className={cn(
                               "w-full px-4 py-3 rounded-xl border bg-background/70 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-300",
-                              errors.email && "border-red-500 focus-visible:ring-red-500",
+                              errors["email"] && "border-red-500 focus-visible:ring-red-500",
                             )}
-                            aria-invalid={errors.email ? "true" : "false"}
-                            aria-describedby={errors.email ? "email-error" : undefined}
+                            aria-invalid={errors["email"] ? "true" : "false"}
+                            aria-describedby={errors["email"] ? "email-error" : undefined}
                             disabled={status === "submitting"}
                           />
-                          {errors.email && (
+                          {errors["email"] && (
                             <p
                               id="email-error"
                               className="mt-1.5 text-sm text-red-500"
                               role="alert"
                             >
-                              {errors.email}
+                              {errors["email"]}
                             </p>
                           )}
                         </div>
@@ -408,19 +408,19 @@ export function ContactPage() {
                             placeholder="+1 (555) 123-4567"
                             className={cn(
                               "w-full px-4 py-3 rounded-xl border bg-background/70 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-300",
-                              errors.phone && "border-red-500 focus-visible:ring-red-500",
+                              errors["phone"] && "border-red-500 focus-visible:ring-red-500",
                             )}
-                            aria-invalid={errors.phone ? "true" : "false"}
-                            aria-describedby={errors.phone ? "phone-error" : undefined}
+                            aria-invalid={errors["phone"] ? "true" : "false"}
+                            aria-describedby={errors["phone"] ? "phone-error" : undefined}
                             disabled={status === "submitting"}
                           />
-                          {errors.phone && (
+                          {errors["phone"] && (
                             <p
                               id="phone-error"
                               className="mt-1.5 text-sm text-red-500"
                               role="alert"
                             >
-                              {errors.phone}
+                              {errors["phone"]}
                             </p>
                           )}
                         </div>
@@ -439,7 +439,7 @@ export function ContactPage() {
                             onChange={handleInputChange}
                             className={cn(
                               "w-full px-4 py-3 rounded-xl border bg-background/70 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-300",
-                              errors.inquiryType && "border-red-500 focus-visible:ring-red-500",
+                              errors["inquiryType"] && "border-red-500 focus-visible:ring-red-500",
                             )}
                             disabled={status === "submitting"}
                           >
@@ -466,7 +466,7 @@ export function ContactPage() {
                           onChange={handleInputChange}
                           className={cn(
                             "w-full px-4 py-3 rounded-xl border bg-background/70 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-300",
-                            errors.areaOfInterest && "border-red-500 focus-visible:ring-red-500",
+                            errors["areaOfInterest"] && "border-red-500 focus-visible:ring-red-500",
                           )}
                           disabled={status === "submitting"}
                         >
@@ -477,9 +477,9 @@ export function ContactPage() {
                             </option>
                           ))}
                         </select>
-                        {errors.areaOfInterest && (
+                        {errors["areaOfInterest"] && (
                           <p className="mt-1.5 text-sm text-red-500" role="alert">
-                            {errors.areaOfInterest}
+                            {errors["areaOfInterest"]}
                           </p>
                         )}
                       </div>
@@ -500,19 +500,19 @@ export function ContactPage() {
                           placeholder="Tell us about your project, inquiry, or how we can help..."
                           className={cn(
                             "w-full px-4 py-3 rounded-xl border bg-background/70 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-300 resize-none",
-                            errors.message && "border-red-500 focus-visible:ring-red-500",
+                            errors["message"] && "border-red-500 focus-visible:ring-red-500",
                           )}
-                          aria-invalid={errors.message ? "true" : "false"}
-                          aria-describedby={errors.message ? "message-error" : undefined}
+                          aria-invalid={errors["message"] ? "true" : "false"}
+                          aria-describedby={errors["message"] ? "message-error" : undefined}
                           disabled={status === "submitting"}
                         />
-                        {errors.message && (
+                        {errors["message"] && (
                           <p
                             id="message-error"
                             className="mt-1.5 text-sm text-red-500"
                             role="alert"
                           >
-                            {errors.message}
+                              {errors["message"]}
                           </p>
                         )}
                       </div>

@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as CareersExploreJobsRouteImport } from './routes/careers/explore-jobs'
 import { Route as CareersFaqRouteImport } from './routes/careers/faq'
 import { Route as CareersWhyAlphaRouteImport } from './routes/careers/why-alpha'
@@ -54,6 +55,11 @@ const ContactRoute = ContactRouteImport.update({
 const WhatWeDoRoute = WhatWeDoRouteImport.update({
   id: '/what-we-do',
   path: '/what-we-do',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CareersExploreJobsRoute = CareersExploreJobsRouteImport.update({
@@ -219,6 +225,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/what-we-do': typeof WhatWeDoRouteWithChildren
+  '/api/contact': typeof ApiContactRoute
   '/careers/explore-jobs': typeof CareersExploreJobsRoute
   '/careers/faq': typeof CareersFaqRoute
   '/careers/why-alpha': typeof CareersWhyAlphaRoute
@@ -252,6 +259,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/what-we-do': typeof WhatWeDoRouteWithChildren
+  '/api/contact': typeof ApiContactRoute
   '/careers/explore-jobs': typeof CareersExploreJobsRoute
   '/careers/faq': typeof CareersFaqRoute
   '/careers/why-alpha': typeof CareersWhyAlphaRoute
@@ -286,6 +294,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/what-we-do': typeof WhatWeDoRouteWithChildren
+  '/api/contact': typeof ApiContactRoute
   '/careers/explore-jobs': typeof CareersExploreJobsRoute
   '/careers/faq': typeof CareersFaqRoute
   '/careers/why-alpha': typeof CareersWhyAlphaRoute
@@ -321,6 +330,7 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/what-we-do'
+    | '/api/contact'
     | '/careers/explore-jobs'
     | '/careers/faq'
     | '/careers/why-alpha'
@@ -354,6 +364,7 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/what-we-do'
+    | '/api/contact'
     | '/careers/explore-jobs'
     | '/careers/faq'
     | '/careers/why-alpha'
@@ -387,6 +398,7 @@ export interface FileRouteTypes {
     | '/'
     | '/contact'
     | '/what-we-do'
+    | '/api/contact'
     | '/careers/explore-jobs'
     | '/careers/faq'
     | '/careers/why-alpha'
@@ -421,6 +433,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
   WhatWeDoRoute: typeof WhatWeDoRouteWithChildren
+  ApiContactRoute: typeof ApiContactRoute
   CareersExploreJobsRoute: typeof CareersExploreJobsRoute
   CareersFaqRoute: typeof CareersFaqRoute
   CareersWhyAlphaRoute: typeof CareersWhyAlphaRoute
@@ -451,6 +464,13 @@ declare module '@tanstack/react-router' {
       path: '/what-we-do'
       fullPath: '/what-we-do'
       preLoaderRoute: typeof WhatWeDoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/careers/explore-jobs': {
@@ -736,6 +756,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   WhatWeDoRoute: WhatWeDoRouteWithChildren,
+  ApiContactRoute: ApiContactRoute,
   CareersExploreJobsRoute: CareersExploreJobsRoute,
   CareersFaqRoute: CareersFaqRoute,
   CareersWhyAlphaRoute: CareersWhyAlphaRoute,

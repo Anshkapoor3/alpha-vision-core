@@ -37,9 +37,7 @@ function getClientIp(request: Request): string {
   return "unknown";
 }
 
-export const Route = createFileRoute(
-  "/api/contact" as Parameters<typeof createFileRoute>[0],
-)({
+export const Route = createFileRoute("/api/contact")({
   server: {
     handlers: {
       POST: async ({ request }) => {
