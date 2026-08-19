@@ -82,12 +82,12 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["info@alphaitms.com", "briefings@alphaitms.com"],
+    lines: ["it.training@alphait.us"],
   },
   {
     icon: Phone,
     title: "Phone",
-    lines: ["+1 800 555 0134", "+1 214 555 0198"],
+    lines: ["9056739082"],
   },
 ];
 

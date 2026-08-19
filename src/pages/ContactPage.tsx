@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/alpha/SectionHeading";
 import { Reveal } from "@/components/alpha/Reveal";
 import { MagneticButton } from "@/components/alpha/MagneticButton";
 import { cn } from "@/lib/utils";
+import { submitContact, contactPayloadSchema, type ContactPayload } from "@/lib/contact";
 
 const heroImage =
   "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop";
@@ -28,7 +29,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    lines: ["9056739084", "9056739082"],
+    lines: ["9056739082"],
   },
 ];
 
@@ -71,6 +72,7 @@ export function ContactPage() {
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitError, setSubmitError] = useState<string>("");
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -91,23 +93,49 @@ export function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (status === "submitting") return; // prevent duplicate submissions
     if (!validateForm()) return;
+
+    const payload: ContactPayload = {
+      name: formData["name"],
+      email: formData["email"],
+      phone: formData["phone"],
+      message: formData["message"],
+      ...(formData["inquiryType"] ? { inquiryType: formData["inquiryType"] } : {}),
+      ...(formData["areaOfInterest"] ? { areaOfInterest: formData["areaOfInterest"] } : {}),
+    };
+
+    const parsed = contactPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      const newErrors: Record<string, string> = {};
+      for (const issue of parsed.error.issues) {
+        const key = String(issue.path[0] ?? "");
+        if (key && !newErrors[key]) newErrors[key] = issue.message;
+      }
+      setErrors(newErrors);
+      return;
+    }
 
     setStatus("submitting");
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        inquiryType: "general",
-        areaOfInterest: "",
-        message: "",
-      });
+      const result = await submitContact(payload);
+      if (result.ok) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          inquiryType: "general",
+          areaOfInterest: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+        setSubmitError(result.error);
+      }
     } catch {
       setStatus("error");
+      setSubmitError("Network error. Please check your connection and try again.");
     }
   };
 
@@ -243,12 +271,6 @@ export function ContactPage() {
                     <h3 className="text-2xl font-medium">Call Us</h3>
                   </div>
                   <div className="space-y-2">
-                    <a
-                      href="tel:9056739084"
-                      className="text-muted-foreground hover:text-[var(--brand-cyan)] transition-colors flex items-center gap-2"
-                    >
-                      9056739084
-                    </a>
                     <a
                       href="tel:9056739082"
                       className="text-muted-foreground hover:text-[var(--brand-cyan)] transition-colors flex items-center gap-2"
@@ -547,8 +569,7 @@ export function ContactPage() {
                   >
                     <p className="flex items-center gap-2">
                       <X className="h-4 w-4" />
-                      Something went wrong. Please try again or email us directly at
-                      it.training@alphait.us
+                      {submitError || "Something went wrong. Please try again or email us directly at it.training@alphait.us"}
                     </p>
                   </motion.div>
                 )}
@@ -636,7 +657,7 @@ export function ContactPage() {
                 value: "IT Park, Plot ITC 15, Sector 67, Sahibzada Ajit Singh Nagar, Punjab 160062",
               },
               { icon: Mail, title: "Email", value: "it.training@alphait.us" },
-              { icon: Phone, title: "Phone", value: "9056739084 / 9056739082" },
+              { icon: Phone, title: "Phone", value: "9056739082" },
             ].map((item, i) => (
               <Reveal key={item.title} delay={0.15 + i * 0.05}>
                 <div className="glass-panel rounded-[1.5rem] border border-border p-6 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] hover:border-[color-mix(in_oklab,var(--brand-cyan)_45%,transparent)]">

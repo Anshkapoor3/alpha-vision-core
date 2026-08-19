@@ -16,6 +16,14 @@ dist-ssr
 .nitro
 *.local
 
+# Environment variables — real secrets are server-only and must never be committed.
+# `*.local` above already ignores .env.local; these cover the remaining variants.
+.env
+.env.development
+.env.production
+.env.staging
+.env.test
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
@@ -29,4 +37,5 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.swp
+*.swo

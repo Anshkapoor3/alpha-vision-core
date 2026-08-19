@@ -31,13 +31,13 @@ export function Footer() {
               <ul className="mt-7 space-y-4">
                 {c.links.map((l) => (
                   <li key={l}>
-                    <a
-                      href="#contact"
-                      className="group relative text-sm text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {l}
-                      <span className="absolute -bottom-1 left-0 h-px w-full origin-right scale-x-0 bg-[var(--brand-cyan)] transition-transform duration-500 ease-[var(--ease-lux)] group-hover:origin-left group-hover:scale-x-100" />
-                    </a>
+                  <a
+                    href="/contact"
+                    className="group relative text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    Contact
+                    <span className="absolute -bottom-1 left-0 h-px w-full origin-right scale-x-0 bg-[var(--brand-cyan)] transition-transform duration-500 ease-[var(--ease-lux)] group-hover:origin-left group-hover:scale-x-100" />
+                  </a>
                   </li>
                 ))}
               </ul>

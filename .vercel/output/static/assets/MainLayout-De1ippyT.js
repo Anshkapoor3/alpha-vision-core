@@ -1,0 +1,1 @@
+import{a as e}from"./index-wayTasMS.js";import{i as t,o as n,r}from"./SectionHeading-DkJKGoX8.js";var i=e();function a({children:e,mainClassName:a}){return(0,i.jsxs)(`div`,{className:`relative min-h-screen`,children:[(0,i.jsx)(t,{}),(0,i.jsx)(`main`,{className:n(`min-h-screen`,a),children:e}),(0,i.jsx)(r,{})]})}export{a as t};
