@@ -52,7 +52,32 @@ type AppRoute =
   | "/who-we-are/overview"
   | "/who-we-are/leadership"
   | "/who-we-are/about-us"
-  | "/who-we-are/global-presence";
+  | "/who-we-are/global-presence"
+  | "/what-we-do"
+  | "/what-we-do/industries"
+  | "/what-we-do/industries/financial-services"
+  | "/what-we-do/industries/government"
+  | "/what-we-do/industries/higher-education"
+  | "/what-we-do/industries/insurance"
+  | "/what-we-do/industries/manufacturing"
+  | "/what-we-do/industries/non-profit"
+  | "/what-we-do/industries/pharmaceuticals"
+  | "/what-we-do/industries/research-development"
+  | "/what-we-do/industries/retail"
+  | "/what-we-do/industries/telecommunications"
+  | "/what-we-do/products"
+  | "/what-we-do/products/forecasting-tool"
+  | "/what-we-do/products/password-reset-tool"
+  | "/what-we-do/services"
+  | "/what-we-do/services/cloud-services"
+  | "/what-we-do/services/custom-product-application-development"
+  | "/what-we-do/services/cyber-security"
+  | "/what-we-do/services/data-services"
+  | "/what-we-do/services/digital-transformation"
+  | "/what-we-do/services/it-implementation-and-integration"
+  | "/what-we-do/services/it-strategy-and-planning"
+  | "/what-we-do/services/managed-it-services"
+  | "/what-we-do/services/other-specialized-services";
 
 type MegaSection = {
   title: string;
@@ -117,44 +142,149 @@ const whatWeDoMenu: MegaMenu = {
   feature: {
     label: "Services",
     description: "Tailored services that blend innovation with expertise.",
-    hash: "services",
+    to: "/what-we-do/services",
     icon: ServerCog,
   },
   sections: [
     {
       title: "Industries",
       items: [
-        { label: "Financial Services", hash: "industries", icon: Landmark },
-        { label: "Retail Services", hash: "industries", icon: ShoppingBag },
-        { label: "Research & Development", hash: "industries", icon: FlaskConical },
-        { label: "Insurance Services", hash: "industries", icon: Umbrella },
-        { label: "Manufacturing", hash: "industries", icon: Factory },
-        { label: "Pharmaceuticals", hash: "industries", icon: Pill },
-        { label: "Telecommunications", hash: "industries", icon: RadioTower },
-        { label: "Higher Education", hash: "industries", icon: GraduationCap },
-        { label: "Non-Proft Agencies", hash: "industries", icon: ShieldCheck },
-        { label: "Government Agencies", hash: "industries", icon: Building2 },
+        {
+          label: "Financial Services",
+          description: "Banking, capital markets, and insurance technology",
+          to: "/what-we-do/industries/financial-services",
+          icon: Landmark,
+        },
+        {
+          label: "Retail Services",
+          description: "E-commerce, supply chain, and customer experience",
+          to: "/what-we-do/industries/retail",
+          icon: ShoppingBag,
+        },
+        {
+          label: "Research & Development",
+          description: "Scientific computing, labs, and innovation platforms",
+          to: "/what-we-do/industries/research-development",
+          icon: FlaskConical,
+        },
+        {
+          label: "Insurance Services",
+          description: "Policy admin, claims, and risk modeling",
+          to: "/what-we-do/industries/insurance",
+          icon: Umbrella,
+        },
+        {
+          label: "Manufacturing",
+          description: "Industrial IoT, MES, and supply chain optimization",
+          to: "/what-we-do/industries/manufacturing",
+          icon: Factory,
+        },
+        {
+          label: "Pharmaceuticals",
+          description: "Clinical trials, regulatory, and manufacturing IT",
+          to: "/what-we-do/industries/pharmaceuticals",
+          icon: Pill,
+        },
+        {
+          label: "Telecommunications",
+          description: "OSS/BSS, network ops, and 5G infrastructure",
+          to: "/what-we-do/industries/telecommunications",
+          icon: RadioTower,
+        },
+        {
+          label: "Higher Education",
+          description: "Student systems, research IT, and campus technology",
+          to: "/what-we-do/industries/higher-education",
+          icon: GraduationCap,
+        },
+        {
+          label: "Non-Profit Agencies",
+          description: "Grant management, donor platforms, and compliance",
+          to: "/what-we-do/industries/non-profit",
+          icon: ShieldCheck,
+        },
+        {
+          label: "Government Agencies",
+          description: "Citizen services, defense, and FedRAMP workloads",
+          to: "/what-we-do/industries/government",
+          icon: Building2,
+        },
       ],
     },
     {
       title: "Products & Platforms",
       items: [
-        { label: "Password Reset Tool", hash: "ecosystem", icon: KeyRound },
-        { label: "Forecasting Tool", hash: "ecosystem", icon: TrendingUp },
+        {
+          label: "Password Reset Tool",
+          description: "Self-service identity governance",
+          to: "/what-we-do/products/password-reset-tool",
+          icon: KeyRound,
+        },
+        {
+          label: "Forecasting Tool",
+          description: "AI-powered predictive planning",
+          to: "/what-we-do/products/forecasting-tool",
+          icon: TrendingUp,
+        },
       ],
     },
     {
       title: "Services",
       items: [
-        { label: "Managed IT Services", hash: "services", icon: ServerCog },
-        { label: "Cyber Security", hash: "services", icon: Shield },
-        { label: "Cloud Services", hash: "services", icon: Cloud },
-        { label: "Digital Transformation", hash: "work", icon: RefreshCcw },
-        { label: "IT Strategy and Planning", hash: "services", icon: ClipboardList },
-        { label: "IT Implementation and Integration", hash: "services", icon: Cable },
-        { label: "Other Specialized Services", hash: "services", icon: CircleEllipsis },
-        { label: "Data Services", hash: "ecosystem", icon: Database },
-        { label: "Custom Product-Application Development", hash: "services", icon: Smartphone },
+        {
+          label: "Managed IT Services",
+          description: "24/7 infrastructure and application operations",
+          to: "/what-we-do/services/managed-it-services",
+          icon: ServerCog,
+        },
+        {
+          label: "Cyber Security",
+          description: "MDR, vulnerability management, and incident response",
+          to: "/what-we-do/services/cyber-security",
+          icon: Shield,
+        },
+        {
+          label: "Cloud Services",
+          description: "Migration, operations, FinOps, and platform engineering",
+          to: "/what-we-do/services/cloud-services",
+          icon: Cloud,
+        },
+        {
+          label: "Digital Transformation",
+          description: "Strategy, automation, and legacy modernization",
+          to: "/what-we-do/services/digital-transformation",
+          icon: RefreshCcw,
+        },
+        {
+          label: "IT Strategy and Planning",
+          description: "Enterprise architecture and portfolio rationalization",
+          to: "/what-we-do/services/it-strategy-and-planning",
+          icon: ClipboardList,
+        },
+        {
+          label: "IT Implementation and Integration",
+          description: "ERP, CRM, and large-scale system delivery",
+          to: "/what-we-do/services/it-implementation-and-integration",
+          icon: Cable,
+        },
+        {
+          label: "Other Specialized Services",
+          description: "Mainframe, licensing, audit, and advisory",
+          to: "/what-we-do/services/other-specialized-services",
+          icon: CircleEllipsis,
+        },
+        {
+          label: "Data Services",
+          description: "Lakehouse, governance, BI, and MLOps",
+          to: "/what-we-do/services/data-services",
+          icon: Database,
+        },
+        {
+          label: "Custom Product-Application Development",
+          description: "Product-minded engineering for mission-critical apps",
+          to: "/what-we-do/services/custom-product-application-development",
+          icon: Smartphone,
+        },
       ],
     },
   ],
