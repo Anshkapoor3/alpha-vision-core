@@ -33,7 +33,10 @@ import { Route as WhatWeDoIndustriesPharmaceuticalsRouteImport } from './routes/
 import { Route as WhatWeDoIndustriesResearchDevelopmentRouteImport } from './routes/what-we-do/industries/research-development'
 import { Route as WhatWeDoIndustriesRetailRouteImport } from './routes/what-we-do/industries/retail'
 import { Route as WhatWeDoIndustriesTelecommunicationsRouteImport } from './routes/what-we-do/industries/telecommunications'
+import { Route as WhatWeDoProductsForecastingToolRouteImport } from './routes/what-we-do/products/forecasting-tool'
+import { Route as WhatWeDoProductsPasswordResetToolRouteImport } from './routes/what-we-do/products/password-reset-tool'
 import { Route as WhatWeDoServicesCloudServicesRouteImport } from './routes/what-we-do/services/cloud-services'
+import { Route as WhatWeDoServicesCustomProductApplicationDevelopmentRouteImport } from './routes/what-we-do/services/custom-product-application-development'
 import { Route as WhatWeDoServicesCyberSecurityRouteImport } from './routes/what-we-do/services/cyber-security'
 import { Route as WhatWeDoServicesDataServicesRouteImport } from './routes/what-we-do/services/data-services'
 import { Route as WhatWeDoServicesDigitalTransformationRouteImport } from './routes/what-we-do/services/digital-transformation'
@@ -172,10 +175,28 @@ const WhatWeDoIndustriesTelecommunicationsRoute =
     path: '/telecommunications',
     getParentRoute: () => WhatWeDoIndustriesRoute,
   } as any)
+const WhatWeDoProductsForecastingToolRoute =
+  WhatWeDoProductsForecastingToolRouteImport.update({
+    id: '/forecasting-tool',
+    path: '/forecasting-tool',
+    getParentRoute: () => WhatWeDoProductsRoute,
+  } as any)
+const WhatWeDoProductsPasswordResetToolRoute =
+  WhatWeDoProductsPasswordResetToolRouteImport.update({
+    id: '/password-reset-tool',
+    path: '/password-reset-tool',
+    getParentRoute: () => WhatWeDoProductsRoute,
+  } as any)
 const WhatWeDoServicesCloudServicesRoute =
   WhatWeDoServicesCloudServicesRouteImport.update({
     id: '/cloud-services',
     path: '/cloud-services',
+    getParentRoute: () => WhatWeDoServicesRoute,
+  } as any)
+const WhatWeDoServicesCustomProductApplicationDevelopmentRoute =
+  WhatWeDoServicesCustomProductApplicationDevelopmentRouteImport.update({
+    id: '/custom-product-application-development',
+    path: '/custom-product-application-development',
     getParentRoute: () => WhatWeDoServicesRoute,
   } as any)
 const WhatWeDoServicesCyberSecurityRoute =
@@ -230,7 +251,7 @@ export interface FileRoutesByFullPath {
   '/careers/faq': typeof CareersFaqRoute
   '/careers/why-alpha': typeof CareersWhyAlphaRoute
   '/what-we-do/industries': typeof WhatWeDoIndustriesRouteWithChildren
-  '/what-we-do/products': typeof WhatWeDoProductsRoute
+  '/what-we-do/products': typeof WhatWeDoProductsRouteWithChildren
   '/what-we-do/services': typeof WhatWeDoServicesRouteWithChildren
   '/who-we-are/about-us': typeof WhoWeAreAboutUsRoute
   '/who-we-are/global-presence': typeof WhoWeAreGlobalPresenceRoute
@@ -246,7 +267,10 @@ export interface FileRoutesByFullPath {
   '/what-we-do/industries/research-development': typeof WhatWeDoIndustriesResearchDevelopmentRoute
   '/what-we-do/industries/retail': typeof WhatWeDoIndustriesRetailRoute
   '/what-we-do/industries/telecommunications': typeof WhatWeDoIndustriesTelecommunicationsRoute
+  '/what-we-do/products/forecasting-tool': typeof WhatWeDoProductsForecastingToolRoute
+  '/what-we-do/products/password-reset-tool': typeof WhatWeDoProductsPasswordResetToolRoute
   '/what-we-do/services/cloud-services': typeof WhatWeDoServicesCloudServicesRoute
+  '/what-we-do/services/custom-product-application-development': typeof WhatWeDoServicesCustomProductApplicationDevelopmentRoute
   '/what-we-do/services/cyber-security': typeof WhatWeDoServicesCyberSecurityRoute
   '/what-we-do/services/data-services': typeof WhatWeDoServicesDataServicesRoute
   '/what-we-do/services/digital-transformation': typeof WhatWeDoServicesDigitalTransformationRoute
@@ -264,7 +288,7 @@ export interface FileRoutesByTo {
   '/careers/faq': typeof CareersFaqRoute
   '/careers/why-alpha': typeof CareersWhyAlphaRoute
   '/what-we-do/industries': typeof WhatWeDoIndustriesRouteWithChildren
-  '/what-we-do/products': typeof WhatWeDoProductsRoute
+  '/what-we-do/products': typeof WhatWeDoProductsRouteWithChildren
   '/what-we-do/services': typeof WhatWeDoServicesRouteWithChildren
   '/who-we-are/about-us': typeof WhoWeAreAboutUsRoute
   '/who-we-are/global-presence': typeof WhoWeAreGlobalPresenceRoute
@@ -280,7 +304,10 @@ export interface FileRoutesByTo {
   '/what-we-do/industries/research-development': typeof WhatWeDoIndustriesResearchDevelopmentRoute
   '/what-we-do/industries/retail': typeof WhatWeDoIndustriesRetailRoute
   '/what-we-do/industries/telecommunications': typeof WhatWeDoIndustriesTelecommunicationsRoute
+  '/what-we-do/products/forecasting-tool': typeof WhatWeDoProductsForecastingToolRoute
+  '/what-we-do/products/password-reset-tool': typeof WhatWeDoProductsPasswordResetToolRoute
   '/what-we-do/services/cloud-services': typeof WhatWeDoServicesCloudServicesRoute
+  '/what-we-do/services/custom-product-application-development': typeof WhatWeDoServicesCustomProductApplicationDevelopmentRoute
   '/what-we-do/services/cyber-security': typeof WhatWeDoServicesCyberSecurityRoute
   '/what-we-do/services/data-services': typeof WhatWeDoServicesDataServicesRoute
   '/what-we-do/services/digital-transformation': typeof WhatWeDoServicesDigitalTransformationRoute
@@ -299,7 +326,7 @@ export interface FileRoutesById {
   '/careers/faq': typeof CareersFaqRoute
   '/careers/why-alpha': typeof CareersWhyAlphaRoute
   '/what-we-do/industries': typeof WhatWeDoIndustriesRouteWithChildren
-  '/what-we-do/products': typeof WhatWeDoProductsRoute
+  '/what-we-do/products': typeof WhatWeDoProductsRouteWithChildren
   '/what-we-do/services': typeof WhatWeDoServicesRouteWithChildren
   '/who-we-are/about-us': typeof WhoWeAreAboutUsRoute
   '/who-we-are/global-presence': typeof WhoWeAreGlobalPresenceRoute
@@ -315,7 +342,10 @@ export interface FileRoutesById {
   '/what-we-do/industries/research-development': typeof WhatWeDoIndustriesResearchDevelopmentRoute
   '/what-we-do/industries/retail': typeof WhatWeDoIndustriesRetailRoute
   '/what-we-do/industries/telecommunications': typeof WhatWeDoIndustriesTelecommunicationsRoute
+  '/what-we-do/products/forecasting-tool': typeof WhatWeDoProductsForecastingToolRoute
+  '/what-we-do/products/password-reset-tool': typeof WhatWeDoProductsPasswordResetToolRoute
   '/what-we-do/services/cloud-services': typeof WhatWeDoServicesCloudServicesRoute
+  '/what-we-do/services/custom-product-application-development': typeof WhatWeDoServicesCustomProductApplicationDevelopmentRoute
   '/what-we-do/services/cyber-security': typeof WhatWeDoServicesCyberSecurityRoute
   '/what-we-do/services/data-services': typeof WhatWeDoServicesDataServicesRoute
   '/what-we-do/services/digital-transformation': typeof WhatWeDoServicesDigitalTransformationRoute
@@ -351,7 +381,10 @@ export interface FileRouteTypes {
     | '/what-we-do/industries/research-development'
     | '/what-we-do/industries/retail'
     | '/what-we-do/industries/telecommunications'
+    | '/what-we-do/products/forecasting-tool'
+    | '/what-we-do/products/password-reset-tool'
     | '/what-we-do/services/cloud-services'
+    | '/what-we-do/services/custom-product-application-development'
     | '/what-we-do/services/cyber-security'
     | '/what-we-do/services/data-services'
     | '/what-we-do/services/digital-transformation'
@@ -385,7 +418,10 @@ export interface FileRouteTypes {
     | '/what-we-do/industries/research-development'
     | '/what-we-do/industries/retail'
     | '/what-we-do/industries/telecommunications'
+    | '/what-we-do/products/forecasting-tool'
+    | '/what-we-do/products/password-reset-tool'
     | '/what-we-do/services/cloud-services'
+    | '/what-we-do/services/custom-product-application-development'
     | '/what-we-do/services/cyber-security'
     | '/what-we-do/services/data-services'
     | '/what-we-do/services/digital-transformation'
@@ -419,7 +455,10 @@ export interface FileRouteTypes {
     | '/what-we-do/industries/research-development'
     | '/what-we-do/industries/retail'
     | '/what-we-do/industries/telecommunications'
+    | '/what-we-do/products/forecasting-tool'
+    | '/what-we-do/products/password-reset-tool'
     | '/what-we-do/services/cloud-services'
+    | '/what-we-do/services/custom-product-application-development'
     | '/what-we-do/services/cyber-security'
     | '/what-we-do/services/data-services'
     | '/what-we-do/services/digital-transformation'
@@ -613,11 +652,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhatWeDoIndustriesTelecommunicationsRouteImport
       parentRoute: typeof WhatWeDoIndustriesRoute
     }
+    '/what-we-do/products/forecasting-tool': {
+      id: '/what-we-do/products/forecasting-tool'
+      path: '/forecasting-tool'
+      fullPath: '/what-we-do/products/forecasting-tool'
+      preLoaderRoute: typeof WhatWeDoProductsForecastingToolRouteImport
+      parentRoute: typeof WhatWeDoProductsRoute
+    }
+    '/what-we-do/products/password-reset-tool': {
+      id: '/what-we-do/products/password-reset-tool'
+      path: '/password-reset-tool'
+      fullPath: '/what-we-do/products/password-reset-tool'
+      preLoaderRoute: typeof WhatWeDoProductsPasswordResetToolRouteImport
+      parentRoute: typeof WhatWeDoProductsRoute
+    }
     '/what-we-do/services/cloud-services': {
       id: '/what-we-do/services/cloud-services'
       path: '/cloud-services'
       fullPath: '/what-we-do/services/cloud-services'
       preLoaderRoute: typeof WhatWeDoServicesCloudServicesRouteImport
+      parentRoute: typeof WhatWeDoServicesRoute
+    }
+    '/what-we-do/services/custom-product-application-development': {
+      id: '/what-we-do/services/custom-product-application-development'
+      path: '/custom-product-application-development'
+      fullPath: '/what-we-do/services/custom-product-application-development'
+      preLoaderRoute: typeof WhatWeDoServicesCustomProductApplicationDevelopmentRouteImport
       parentRoute: typeof WhatWeDoServicesRoute
     }
     '/what-we-do/services/cyber-security': {
@@ -706,8 +766,23 @@ const WhatWeDoIndustriesRouteChildren: WhatWeDoIndustriesRouteChildren = {
 const WhatWeDoIndustriesRouteWithChildren =
   WhatWeDoIndustriesRoute._addFileChildren(WhatWeDoIndustriesRouteChildren)
 
+interface WhatWeDoProductsRouteChildren {
+  WhatWeDoProductsForecastingToolRoute: typeof WhatWeDoProductsForecastingToolRoute
+  WhatWeDoProductsPasswordResetToolRoute: typeof WhatWeDoProductsPasswordResetToolRoute
+}
+
+const WhatWeDoProductsRouteChildren: WhatWeDoProductsRouteChildren = {
+  WhatWeDoProductsForecastingToolRoute: WhatWeDoProductsForecastingToolRoute,
+  WhatWeDoProductsPasswordResetToolRoute:
+    WhatWeDoProductsPasswordResetToolRoute,
+}
+
+const WhatWeDoProductsRouteWithChildren =
+  WhatWeDoProductsRoute._addFileChildren(WhatWeDoProductsRouteChildren)
+
 interface WhatWeDoServicesRouteChildren {
   WhatWeDoServicesCloudServicesRoute: typeof WhatWeDoServicesCloudServicesRoute
+  WhatWeDoServicesCustomProductApplicationDevelopmentRoute: typeof WhatWeDoServicesCustomProductApplicationDevelopmentRoute
   WhatWeDoServicesCyberSecurityRoute: typeof WhatWeDoServicesCyberSecurityRoute
   WhatWeDoServicesDataServicesRoute: typeof WhatWeDoServicesDataServicesRoute
   WhatWeDoServicesDigitalTransformationRoute: typeof WhatWeDoServicesDigitalTransformationRoute
@@ -719,6 +794,8 @@ interface WhatWeDoServicesRouteChildren {
 
 const WhatWeDoServicesRouteChildren: WhatWeDoServicesRouteChildren = {
   WhatWeDoServicesCloudServicesRoute: WhatWeDoServicesCloudServicesRoute,
+  WhatWeDoServicesCustomProductApplicationDevelopmentRoute:
+    WhatWeDoServicesCustomProductApplicationDevelopmentRoute,
   WhatWeDoServicesCyberSecurityRoute: WhatWeDoServicesCyberSecurityRoute,
   WhatWeDoServicesDataServicesRoute: WhatWeDoServicesDataServicesRoute,
   WhatWeDoServicesDigitalTransformationRoute:
@@ -738,13 +815,13 @@ const WhatWeDoServicesRouteWithChildren =
 
 interface WhatWeDoRouteChildren {
   WhatWeDoIndustriesRoute: typeof WhatWeDoIndustriesRouteWithChildren
-  WhatWeDoProductsRoute: typeof WhatWeDoProductsRoute
+  WhatWeDoProductsRoute: typeof WhatWeDoProductsRouteWithChildren
   WhatWeDoServicesRoute: typeof WhatWeDoServicesRouteWithChildren
 }
 
 const WhatWeDoRouteChildren: WhatWeDoRouteChildren = {
   WhatWeDoIndustriesRoute: WhatWeDoIndustriesRouteWithChildren,
-  WhatWeDoProductsRoute: WhatWeDoProductsRoute,
+  WhatWeDoProductsRoute: WhatWeDoProductsRouteWithChildren,
   WhatWeDoServicesRoute: WhatWeDoServicesRouteWithChildren,
 }
 
