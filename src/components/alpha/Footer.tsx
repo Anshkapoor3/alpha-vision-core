@@ -40,9 +40,7 @@ export function Footer() {
         <div className="grid gap-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="min-w-0">
             <div className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full border border-border/60 bg-background/60 shadow-sm shrink-0">
-                <img src="/logo.png" alt="Alpha IT Managed Services" className="h-8 w-8 object-contain" />
-              </span>
+              <img src="/logo.png" alt="Alpha IT Managed Services" className="h-11 w-11 object-contain" />
               <span className="font-display text-base tracking-tight truncate">ALPHA IT MANAGED SERVICES</span>
             </div>
             <p className="mt-8 max-w-sm text-sm leading-relaxed text-muted-foreground">

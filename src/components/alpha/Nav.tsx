@@ -77,7 +77,10 @@ type AppRoute =
   | "/what-we-do/services/it-implementation-and-integration"
   | "/what-we-do/services/it-strategy-and-planning"
   | "/what-we-do/services/managed-it-services"
-  | "/what-we-do/services/other-specialized-services";
+  | "/what-we-do/services/other-specialized-services"
+  | "/careers/explore-jobs"
+  | "/careers/faq"
+  | "/careers/why-alpha";
 
 type MegaSection = {
   title: string;
@@ -293,7 +296,7 @@ const whatWeDoMenu: MegaMenu = {
 const megaMenus = [whoWeAreMenu, whatWeDoMenu];
 
 const topLevelLinks: NavLink[] = [
-  { label: "Careers", hash: "academy" },
+  { label: "Careers", to: "/careers/explore-jobs" },
   { label: "About Us", to: "/who-we-are/about-us" },
   { label: "IT Training", href: "https://trainings.alphaitms.com/" },
 ];
@@ -354,9 +357,7 @@ function LogoLink({ onClick }: { onClick?: () => void }) {
       className="group flex min-w-0 items-center gap-3"
       aria-label="Alpha IT Managed Services home"
     >
-      <span className="relative grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full border border-border/60 bg-background/60 shadow-sm transition-all duration-500 group-hover:border-[color-mix(in_oklab,var(--brand-cyan)_55%,transparent)]">
-        <img src="/logo.png" alt="" className="h-7 w-7 object-contain" />
-      </span>
+      <img src="/logo.png" alt="" className="h-12 w-12 object-contain" />
       <span className="min-w-0 leading-none">
         <span className="block font-display text-sm font-semibold tracking-tight">ALPHA</span>
         <span className="block truncate text-[0.6rem] tracking-[0.28em] text-muted-foreground">
